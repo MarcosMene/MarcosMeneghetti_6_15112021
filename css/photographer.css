@@ -1,6 +1,6 @@
-#contact_modal {
+/* #contact_modal {
     display: none;
-}
+} */
 
 .photograph-header {
     background-color: #FAFAFA;
@@ -21,46 +21,402 @@
     cursor: pointer;
 }
 
+
+
+/* photographers page */
+
+.photograph_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fafafa;
+    border-radius: 5px;
+    align-items: center;
+    margin: auto;
+    padding: 56px 0;
+
+}
+
+.photograph_header .photograph-info {
+    margin-left: 50px;
+}
+
+
+
+.photograph_header h1 {
+    color: #D3573C;
+    font-size: 4rem;
+    /* margin: 0; */
+    line-height: 83px;
+    font-weight: 400;
+}
+
+.photograph_header h2 {
+    color: #901C1C;
+    font-size: 1.5rem;
+    line-height: 31px;
+    /* margin: 0; */
+    font-weight: 400;
+
+}
+
+.photograph_header p {
+    color: #525252;
+    font-size: 1.125rem;
+
+    line-height: 23px;
+}
+
+
+
+
+.photograph_header button {
+    margin-left: 200px;
+    margin-right: auto;
+}
+
+.photograph_header .photograph-img {
+    display: flex;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-right: 60px;
+}
+
+.photograph_header .photograph-img img {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+
+/* select dropdown 
+**
+*/
+
+.select-dropdown {
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+
+}
+
+.select-dropdown h3 {
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+    font-size: 1.125em;
+    font-weight: 700;
+}
+
+
+
+.select-dropdown .dropdown {
+    position: absolute;
+    top: 69px;
+    left: 87px;
+    z-index: 100px;
+    display: none;
+
+
+}
+
+
+.select-dropdown span {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.select-dropdown li:last-child {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.select-dropdown span,
+li {
+    width: 172px;
+    height: 69px;
+    background-color: #911C1C;
+    border: none;
+    font-size: 1.125em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+
+.select-dropdown i {
+    margin-left: 10px;
+}
+
+/* arrow up select-dropdown */
+.select-dropdown i:not(:first-child) {
+    display: none;
+}
+
+
+
+.select-dropdown li:before {
+    content: "";
+    width: 150px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+
+
+}
+
+/* photographers catalog image *
+***
+ */
+
+.photograph-header {
+    background-color: #FAFAFA;
+    height: 300px;
+    margin: 0 100px;
+}
+
+.photograph-catalog-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 70px;
+    margin-top: 44px;
+    width: 100%;
+}
+
+
+
+.photograph-catalog-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.photograph-catalog-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+    line-height: 31px;
+    color: #901C1C;
+}
+
+.photograph-catalog-icon {
+    display: flex;
+}
+
+.photograph-catalog-icon i {
+    font-size: .8em;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* likes-prices 
+*****
+*/
+
+.likes-price {
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    background-color: #DB8876;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-weight: 700;
+}
+
+.likes-price .like {
+    display: flex;
+    align-items: center;
+}
+
+.likes-price .like h3 {
+    margin-right: 10px;
+}
+
+
+
+/* light box modal 
+*****
+*/
+
+.lightbox-modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(196, 196, 196, 0.4);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+}
+
+.lightbox-modal .modal-carousel {
+    width: 60%;
+    height: 80%;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.lightbox-modal .carousel {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px 60px;
+}
+
+.lightbox-modal .carousel-item {
+    height: 100%;
+    width: 100%;
+}
+
+.lightbox-modal .carousel-img {
+    height: 100%;
+    width: 100%;
+    cursor: default;
+}
+
+.lightbox-modal .carousel-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+.lightbox-modal .controls {
+    position: absolute;
+    font-size: 40px;
+    color: #901C1C;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.lightbox-modal .controls-left {
+    left: -40px;
+}
+
+.lightbox-modal .controls-right {
+    right: -40px;
+}
+
+.lightbox-modal .modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 42px;
+    z-index: 400;
+    background-color: transparent;
+    color: #901C1C;
+    border: none;
+    cursor: pointer;
+}
+
+/* contact form 
+**
+ */
+#contact_modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background: rgba(196, 196, 196, 0.4);
+}
+
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
     width: 50%;
+    max-width: 670px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 35px;
-    margin: auto;
+    padding: 15px 35px;
+    margin: 5% auto;
+    position: relative;
+    height: 900px;
 }
 
-.modal header {
-    justify-content: space-between;
+.modal .modal-title {
     width: 100%;
 }
 
-.modal header img {
+.modal .close-form {
     cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
 }
 
-.modal header h2 {
-    font-size: 64px;
+.modal h2 {
+    font-size: 4em;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
+    margin: 0;
+    padding: 0;
 }
 
-form {
+
+.modal form {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
 }
 
-form label {
+.modal form label {
     color: #312E2E;
-    font-size: 36px;
+    font-size: 2.25em;
+    line-height: 46.87px;
 }
 
-form div {
+.modal form input,
+.modal textarea {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal form input {
+    height: 68px;
+    font-size: 1.8em;
+}
+
+.modal textarea {
+    height: 170px;
+}
+
+.modal form div {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -68,9 +424,17 @@ form div {
     margin-bottom: 26px;
 }
 
-form input {
-    width: 100%;
-    height: 68px;
+
+
+.modal .contact_button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
     border: none;
+    background-color: #901C1C;
     border-radius: 5px;
+    cursor: pointer;
 }
