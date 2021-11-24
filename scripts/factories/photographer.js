@@ -4,8 +4,6 @@ function photographerFactory(data) {
   const picture = `assets/photographers/photographersID/${portrait}`;
 
   function getUserCardDOM() {
-    // const article = document.querySelector(".photographer_section");
-
     const photoCard = document.createElement("article");
     photoCard.className = "photographer_card";
 
@@ -18,11 +16,11 @@ function photographerFactory(data) {
     const img = document.createElement("img");
     img.setAttribute("src", picture);
 
-    const h2 = document.createElement("h2");
-    h2.textContent = name;
+    const h2Name = document.createElement("h2");
+    h2Name.textContent = name;
 
     photoImg.appendChild(img);
-    photoImg.appendChild(h2);
+    photoImg.appendChild(h2Name);
     photoLink.appendChild(photoImg);
     photoCard.appendChild(photoLink);
 
@@ -50,5 +48,5 @@ function photographerFactory(data) {
 
     return photoCard;
   }
-  return { name, picture, getUserCardDOM };
+  return { getUserCardDOM };
 }

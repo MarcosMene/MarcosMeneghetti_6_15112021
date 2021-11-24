@@ -72,7 +72,7 @@
 
 
 .photograph_header button {
-    margin-left: 200px;
+    margin-left: 5%;
     margin-right: auto;
 }
 
@@ -88,6 +88,7 @@
     width: 200px;
     border-radius: 100%;
     object-fit: cover;
+    box-shadow: 0 2px 14px 2px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -114,19 +115,18 @@
 
 .select-dropdown .dropdown {
     position: absolute;
-    top: 69px;
+    top: 65px;
     left: 87px;
     z-index: 100px;
     display: none;
-
-
 }
 
 
 .select-dropdown span {
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    border-radius: 5px;
 }
+
+
 
 .select-dropdown li:last-child {
     border-bottom-right-radius: 5px;
@@ -189,6 +189,7 @@ li {
     gap: 70px;
     margin-top: 44px;
     width: 100%;
+    padding-bottom: 60px;
 }
 
 
@@ -216,6 +217,7 @@ li {
     display: flex;
     align-items: center;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 /* likes-prices 
@@ -248,6 +250,8 @@ li {
 
 
 
+
+
 /* light box modal 
 *****
 */
@@ -267,25 +271,23 @@ li {
 }
 
 .lightbox-modal .modal-carousel {
-    width: 60%;
+    width: 50%;
     height: 80%;
     background-color: #fff;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 20px 80px;
 
 }
 
 .lightbox-modal .carousel {
-
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
-    padding: 20px 60px;
 }
 
 .lightbox-modal .carousel-item {
@@ -318,11 +320,11 @@ li {
 }
 
 .lightbox-modal .controls-left {
-    left: -40px;
+    left: -50px;
 }
 
 .lightbox-modal .controls-right {
-    right: -40px;
+    right: -50px;
 }
 
 .lightbox-modal .modal-close-btn {
