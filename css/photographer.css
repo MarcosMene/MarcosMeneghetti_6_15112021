@@ -195,7 +195,10 @@ li {
 
 
 .photograph-catalog-card img {
-    width: 100%;
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+    /* width: 100%; */
     border-radius: 5px;
 }
 

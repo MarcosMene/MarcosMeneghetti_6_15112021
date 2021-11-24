@@ -1,24 +1,45 @@
-function MediaPageFactory(data) {
-  const { id, photographerId, title, image, likes, date } = data;
+function MediaPageFactory(dataMedia) {
+  const { photographerId, title, image, likes } = dataMedia;
+
+  const catalog = `./assets/photographers/${photographerId}/${image}`;
 
   function MediaDOM() {
-    const InfophotographerHeader = ` 
-      <div class="photograph-catalog-card">
+    const divCard = document.createElement("div");
+    divCard.className = "photograph-catalog-card";
 
-      <img src="./assets/photographers/${photographerId}/${image}" alt="">
+    const img = document.createElement("img");
+    img.setAttribute("src", `${catalog}`);
 
-      <div class="photograph-catalog-info">
-        <div class="photograph-catalog-txt">
-          <p>${title}</p>
-        </div>
-        <div class="photograph-catalog-icon">
-          <p>${likes} </p>
-          <i class="fas fa-heart"></i>
-        </div>
-      </div>
-    </div>`;
+    const divCardInfo = document.createElement("div");
+    divCardInfo.className = "photograph-catalog-info";
 
-    return InfophotographerHeader;
+    const divCardTxt = document.createElement("div");
+    divCardTxt.className = "photograph-catalog-txt";
+
+    const paragraphTitle = document.createElement("p");
+    paragraphTitle.innerHTML = `${title}`;
+
+    divCardTxt.appendChild(paragraphTitle);
+    divCardInfo.appendChild(divCardTxt);
+
+    const divIcon = document.createElement("div");
+    divIcon.className = "photograph-catalog-icon";
+
+    const paragraph = document.createElement("p");
+    paragraph.innerHTML = `${likes}`;
+
+    const icon = document.createElement("i");
+    icon.classList = ("fas", "fa-heart");
+
+    divIcon.appendChild(paragraph);
+    divIcon.appendChild(icon);
+
+    divCardTxt.appendChild(paragraphTitle);
+    divCardInfo.appendChild(divCardTxt);
+
+    divCard.appendChild(img);
+    divCard.appendChild(divCardInfo);
+    return divCard;
   }
   return { MediaDOM };
 }

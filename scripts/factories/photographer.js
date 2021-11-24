@@ -4,8 +4,6 @@ function photographerFactory(data) {
   const picture = `./assets/photographers/photographersID/${portrait}`;
 
   function getUserCardDOM() {
-    // const article = document.querySelector(".photographer_section");
-
     const photoCard = document.createElement("article");
     photoCard.className = "photographer_card";
 
@@ -47,7 +45,7 @@ function photographerFactory(data) {
 
     photoCard.appendChild(photoLink);
     photoCard.appendChild(photoInfo);
-
+    console.log(photoCard);
     return photoCard;
   }
   return { name, picture, getUserCardDOM };
