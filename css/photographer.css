@@ -2,6 +2,8 @@
     display: none;
 } */
 
+
+
 .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
@@ -115,18 +117,24 @@
 
 .select-dropdown .dropdown {
     position: absolute;
-    top: 65px;
+    top: 0;
     left: 87px;
-    z-index: 100px;
+    z-index: 20px;
     display: none;
 }
 
 
 .select-dropdown span {
     border-radius: 5px;
+    z-index: 40px;
 }
 
 
+
+.select-dropdown li:first-child {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
 
 .select-dropdown li:last-child {
     border-bottom-right-radius: 5px;
@@ -152,17 +160,17 @@ li {
 
 
 .select-dropdown i {
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 /* arrow up select-dropdown */
-.select-dropdown i:not(:first-child) {
+/* .select-dropdown i:not(:first-child) {
     display: none;
-}
+} */
 
 
 
-.select-dropdown li:before {
+.select-dropdown li:not(:first-child):before {
     content: "";
     width: 150px;
     height: 1px;
@@ -195,9 +203,10 @@ li {
 
 
 .photograph-catalog-card img {
-    width: 350px;
+    width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: 50% 30%;
     /* width: 100%; */
     border-radius: 5px;
 }
@@ -345,6 +354,7 @@ li {
 /* contact form 
 **
  */
+
 #contact_modal {
     display: none;
     position: fixed;
