@@ -1,54 +1,32 @@
 function photographerPageFactory(data) {
-  const { name, portrait, city, country, tagline } = data;
+  const { name, portrait, city, country, tagline, alt } = data;
 
-  const picture = `assets/photographers/photographersID/${portrait}`;
+  const picture = `./assets/photographers/photographersID/${portrait}`;
 
-  function photographerHeaderDOM() {
-    const InfophotographerHeader = document.createElement("div");
-    InfophotographerHeader.className = "photograph-info";
+  function PhotographerHeaderDOM() {
+    const $wrapper = document.createElement("div");
+    $wrapper.classList.add("photograph_header");
 
-    const photographName = document.createElement("div");
-    photographName.className = "photograph-name";
+    const photographerCard = `
+    <div class="photograph-info">
+    <div class=photograph-name>
+      <h1>${name}</h1>
+    </div>
+    <div class="photograph-txt">
+      <h2>${city}, ${country}</h2>
+      <p>${tagline}</p>
+    </div>
+</div>
 
-    const photographNameTxt = document.createElement("h1");
-    photographNameTxt.textContent = name;
+  <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
 
-    photographName.appendChild(photographNameTxt);
+  <div class="photograph-img">
+    <img src="${picture}" alt="${alt}">
+  </div>  
+        `;
 
-    const photographTxt = document.createElement("div");
-    photographTxt.className = "photograph-txt";
-
-    const cityBirth = document.createElement("h2");
-    cityBirth.textContent = `${city + ", " + country}`;
-
-    const tagLine = document.createElement("p");
-    tagLine.className = "tagline";
-    tagLine.textContent = tagline;
-
-    photographTxt.appendChild(cityBirth);
-    photographTxt.appendChild(tagLine);
-
-    const buttonContact = document.createElement("button");
-    buttonContact.type = "button";
-    buttonContact.innerText = "Contactez-moi";
-    buttonContact.className = "contact_button";
-    buttonContact.onclick = "displayModal()";
-
-    const PhotoimgDiv = document.createElement("div");
-    PhotoimgDiv.className = "photograph-img";
-
-    const Photoimg = document.createElement("img");
-    Photoimg.setAttribute("src", picture);
-    Photoimg.setAttribute("alt", "teste");
-
-    PhotoimgDiv.appendChild(Photoimg);
-
-    InfophotographerHeader.appendChild(photographName);
-    InfophotographerHeader.appendChild(photographTxt);
-    InfophotographerHeader.appendChild(buttonContact);
-    InfophotographerHeader.appendChild(PhotoimgDiv);
-
-    return InfophotographerHeader;
+    $wrapper.innerHTML = photographerCard;
+    return $wrapper;
   }
-  return { photographerHeaderDOM };
+  return { PhotographerHeaderDOM };
 }
