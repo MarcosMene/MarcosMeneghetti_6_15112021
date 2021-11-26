@@ -1,7 +1,7 @@
 class App {
   constructor() {
     this.$wrapper = document.querySelector(".photographer_section");
-    this.PhotographersApi = new PhotographersApi("./data/photographers.json");
+    this.PhotographersApi = new PhotographersApi("/data/photographers.json");
   }
 
   async main() {
@@ -10,11 +10,6 @@ class App {
     photographersData
       .map((photographer) => new photographer(photographer))
       .forEach((photographer) => {
-        console.log("====");
-        console.log(photographer);
-        console.log("====");
-        console.log("====");
-
         const Template = new MovieCard(photographer);
         this.$wrapper.appendChild(Template.getPhotographerDOM);
       });
