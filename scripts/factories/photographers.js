@@ -8,7 +8,7 @@ function photographerFactory(data) {
     $wrapper.classList.add("photographer_card");
 
     const photograph = `
-    <a href="./photographer.html">
+    <a href="./photographer.html?=${name}">
       <div class="photographer_img">
         <img src="${picture}" alt="test">
         <h2>${name}</h2>
