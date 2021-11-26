@@ -1,0 +1,19 @@
+{
+  "name": "marcosmeneghetti_6_15112021",
+  "version": "1.0.0",
+  "description": "FishEye",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcosMene/MarcosMeneghetti_6_15112021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcosMene/MarcosMeneghetti_6_15112021/issues"
+  },
+  "homepage": "https://github.com/MarcosMene/MarcosMeneghetti_6_15112021#readme"
+}
