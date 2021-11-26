@@ -601,15 +601,17 @@ async function getPhotographers() {
   };
 }
 
-async function displayPhotographerData(photographers) {
+async function displayPhotographerData(photographer) {
   const PhotographerSection = document.querySelector(
     ".photograph_header_section"
   );
 
-  const PhotographerModel = photographerPageFactory(photographers);
+  const PhotographerModel = photographerPageFactory(photographer);
   const PhotographerDOM = PhotographerModel.PhotographerHeaderDOM();
   PhotographerSection.appendChild(PhotographerDOM);
 }
+
+
 
 async function displayMediaData(medias) {
   const MediaSection = document.querySelector(".photograph-catalog-cards");

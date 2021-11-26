@@ -1,7 +1,7 @@
 function MediaPageFactory(data) {
   const { photographerId, title, image, likes } = data;
 
-  const catalog = `./assets/photographers/${photographerId}/${image}`;
+  const catalog = `/assets/photographers/${photographerId}/${image}`;
 
   function MediaDOM() {
     const $wrapper = document.createElement("div");

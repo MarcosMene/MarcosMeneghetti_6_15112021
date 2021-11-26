@@ -1,14 +1,14 @@
 function photographerFactory(data) {
   const { name, portrait, city, country, tagline, price } = data;
 
-  const picture = `./assets/photographers/photographersID/${portrait}`;
+  const picture = `/assets/photographers/photographersID/${portrait}`;
 
   function getPhotographerDOM() {
     const $wrapper = document.createElement("div");
     $wrapper.classList.add("photographer_card");
 
     const photograph = `
-    <a href="./photographer.html">
+    <a href="/photographer.html?=${name}">
       <div class="photographer_img">
         <img src="${picture}" alt="test">
         <h2>${name}</h2>

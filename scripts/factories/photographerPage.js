@@ -1,7 +1,7 @@
 function photographerPageFactory(data) {
   const { name, portrait, city, country, tagline, alt } = data;
 
-  const picture = `./assets/photographers/photographersID/${portrait}`;
+ const picture = `/assets/photographers/photographersID/${portrait}`;
 
   function PhotographerHeaderDOM() {
     const $wrapper = document.createElement("div");
