@@ -704,7 +704,13 @@ async function initMedia() {
 
   // Récupère les datas des medias
   const { medias } = await getMedias();
-  displayMediaData(medias);
+
+  //filtre media avec id
+  const ShowMediaphototgrapher = medias.filter(
+    (media) => media.photographerId == idURL
+  );
+
+  displayMediaData(ShowMediaphototgrapher);
 }
 
 initMedia();
