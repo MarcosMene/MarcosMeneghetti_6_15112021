@@ -1,6 +1,5 @@
 async function getPhotographers() {
   // Penser à remplacer par les données récupérées dans le json
-
   const photographers = [
     {
       name: "Mimi Keel",
@@ -10,6 +9,7 @@ async function getPhotographers() {
       tagline: "Voir le beau dans le quotidien",
       price: 400,
       portrait: "MimiKeel.jpg",
+      alt: "portrait de Mimi Keel",
     },
     {
       name: "Ellie-Rose Wilkens",
@@ -19,6 +19,7 @@ async function getPhotographers() {
       tagline: "Capturer des compositions complexes",
       price: 250,
       portrait: "EllieRoseWilkens.jpg",
+      alt: "portrait de Ellie-Rose Wilkens",
     },
     {
       name: "Tracy Galindo",
@@ -28,6 +29,7 @@ async function getPhotographers() {
       tagline: "Photographe freelance",
       price: 500,
       portrait: "TracyGalindo.jpg",
+      alt: "portrait de Tracy Galindo",
     },
     {
       name: "Nabeel Bradford",
@@ -37,6 +39,7 @@ async function getPhotographers() {
       tagline: "Toujours aller de l'avant",
       price: 350,
       portrait: "NabeelBradford.jpg",
+      alt: "portrait de Nabeel Bradford",
     },
     {
       name: "Rhode Dubois",
@@ -46,6 +49,7 @@ async function getPhotographers() {
       tagline: "Je crée des souvenirs",
       price: 275,
       portrait: "RhodeDubois.jpg",
+      alt: "portrait de Rhode Dubois",
     },
     {
       name: "Marcel Nikolic",
@@ -55,8 +59,10 @@ async function getPhotographers() {
       tagline: "Toujours à la recherche de LA photo",
       price: 300,
       portrait: "MarcelNikolic.jpg",
+      alt: "portrait de Marcel Nikolic",
     },
   ];
+
   // et bien retourner le tableau photographers seulement une fois
   return {
     photographers,
@@ -76,6 +82,7 @@ async function displayData(photographers) {
 async function init() {
   // Récupère les datas des photographes
   const { photographers } = await getPhotographers();
+
   displayData(photographers);
 }
 

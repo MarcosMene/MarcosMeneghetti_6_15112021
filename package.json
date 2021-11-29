@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/MarcosMene/MarcosMeneghetti_6_15112021.git"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "bugs": {

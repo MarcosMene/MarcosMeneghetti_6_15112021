@@ -9,6 +9,7 @@ async function getMedias() {
       likes: 62,
       date: "2011-12-08",
       price: 55,
+      alt: "femme habillée avec des vêtements sportifs couleur jaune",
     },
     {
       id: 8520927,
@@ -18,6 +19,7 @@ async function getMedias() {
       likes: 11,
       date: "2011-11-06",
       price: 55,
+      alt: "femme avec des vêtements motifs foret accroupi sur au milieu d'un pont",
     },
     {
       id: 9025895,
@@ -27,6 +29,7 @@ async function getMedias() {
       likes: 72,
       date: "2013-08-12",
       price: 55,
+      alt: "femme avec des vêtements motifs jaune et noir contre un mur",
     },
     {
       id: 9275938,
@@ -36,6 +39,7 @@ async function getMedias() {
       likes: 69,
       date: "2018-02-22",
       price: 55,
+      alt: "Gazebo avec un dôme decorê pour un mariage",
     },
     {
       id: 2053494,
@@ -45,6 +49,7 @@ async function getMedias() {
       likes: 2,
       date: "2020-05-25",
       price: 55,
+      alt: "dos des mariés avec ses invités ",
     },
     {
       id: 7324238,
@@ -54,6 +59,7 @@ async function getMedias() {
       likes: 33,
       date: "2019-06-12",
       price: 55,
+      alt: "table decoré pour une fête d'aniversaire de 18 ans",
     },
     {
       id: 8328953,
@@ -71,6 +77,7 @@ async function getMedias() {
       likes: 88,
       date: "2007-05-07",
       price: 55,
+      alt: "Triangle blanc dessiné sur une porte bleu",
     },
     {
       id: 8523492,
@@ -80,6 +87,7 @@ async function getMedias() {
       likes: 24,
       date: "2018-05-05",
       price: 55,
+      alt: "une tunel de metrô rempli des graffitis",
     },
     {
       id: 75902334,
@@ -89,6 +97,7 @@ async function getMedias() {
       likes: 75,
       date: "2019-11-25",
       price: 55,
+      alt: "peiture moderne des oiseaux couleur bleu et rouge",
     },
 
     {
@@ -99,6 +108,7 @@ async function getMedias() {
       likes: 52,
       date: "2013-02-30",
       price: 70,
+      alt: "équipe d'aviron vue du dessus",
     },
     {
       id: 92758372,
@@ -108,6 +118,7 @@ async function getMedias() {
       likes: 58,
       date: "2018-07-17",
       price: 70,
+      alt: "un homme et une femme avec ses bras en l'aire pour former des ailes",
     },
     {
       id: 32958383,
@@ -117,6 +128,7 @@ async function getMedias() {
       likes: 11,
       date: "2019-08-12",
       price: 70,
+      alt: "une femme habillée d'une robe rouge",
     },
     {
       id: 928587383,
@@ -126,6 +138,7 @@ async function getMedias() {
       likes: 2,
       date: "2019-01-02",
       price: 70,
+      alt: "une équipe dans une salle de reunion",
     },
     {
       id: 725639493,
@@ -135,6 +148,7 @@ async function getMedias() {
       likes: 3,
       date: "2019-05-20",
       price: 70,
+      alt: "un homme montre une nouveau produit à un groupe assise face à lui",
     },
     {
       id: 23394384,
@@ -144,6 +158,7 @@ async function getMedias() {
       likes: 52,
       date: "2019-07-18",
       price: 70,
+      alt: "un homme en train de jouer un clavier életronique",
     },
     {
       id: 87367293,
@@ -153,6 +168,7 @@ async function getMedias() {
       likes: 23,
       date: "2018-02-22",
       price: 70,
+      alt: "une chanteuse qui regarde son public",
     },
     {
       id: 593834784,
@@ -162,6 +178,7 @@ async function getMedias() {
       likes: 52,
       date: "2017-03-13",
       price: 70,
+      alt: "un cerf dans la forêt",
     },
     {
       id: 83958935,
@@ -187,6 +204,7 @@ async function getMedias() {
       likes: 101,
       date: "2017-04-03",
       price: 45,
+      alt: "une piscine naturelle avec des gens qui prend de bain chaud",
     },
     {
       id: 73434243,
@@ -196,6 +214,7 @@ async function getMedias() {
       likes: 99,
       date: "2018-04-30",
       price: 45,
+      alt: "une auto-route en zigzag",
     },
     {
       id: 23425523,
@@ -205,6 +224,7 @@ async function getMedias() {
       likes: 34,
       date: "2016-04-05",
       price: 45,
+      alt: "un pont courbé au milieu d'une forêt",
     },
     {
       id: 23134513,
@@ -214,6 +234,7 @@ async function getMedias() {
       likes: 23,
       date: "2017-03-18",
       price: 45,
+      alt: "un petit bateau en bois au milieu d'un lac entouré des montagnes",
     },
     {
       id: 92352352,
@@ -223,6 +244,7 @@ async function getMedias() {
       likes: 66,
       date: "2018-05-24",
       price: 45,
+      alt: "portrait d'une fille souriante aux cheveux roux ",
     },
     {
       id: 34513453,
@@ -232,6 +254,7 @@ async function getMedias() {
       likes: 52,
       date: "2017-04-21",
       price: 45,
+      alt: "portrait noir et blanc d'un homme",
     },
     {
       id: 23523533,
@@ -241,6 +264,7 @@ async function getMedias() {
       likes: 95,
       date: "2018-11-02",
       price: 45,
+      alt: "portrait noir et blanc d'une femme",
     },
     {
       id: 525834234,
@@ -250,6 +274,7 @@ async function getMedias() {
       likes: 25,
       date: "2019-01-02",
       price: 45,
+      alt: "portrait d'une homme âgé",
     },
 
     {
@@ -260,6 +285,7 @@ async function getMedias() {
       likes: 88,
       date: "2019-02-03",
       price: 45,
+      alt: "une personne seule au sommet d'une montagne",
     },
     {
       id: 625025343,
@@ -269,6 +295,7 @@ async function getMedias() {
       likes: 85,
       date: "2019-04-03",
       price: 45,
+      alt: "une falaise avec des maisons colorés",
     },
     {
       id: 2525345343,
@@ -278,6 +305,7 @@ async function getMedias() {
       likes: 34,
       date: "2019-04-07",
       price: 45,
+      alt: "portrait noir et blanc d'un enfant",
     },
     {
       id: 2523434634,
@@ -287,6 +315,7 @@ async function getMedias() {
       likes: 63,
       date: "2019-04-07",
       price: 45,
+      alt: "portrait d'une femme avec des lunettes",
     },
     {
       id: 398847109,
@@ -296,6 +325,7 @@ async function getMedias() {
       likes: 55,
       date: "2019-06-20",
       price: 45,
+      alt: "portrait noir et blanc d'une femme",
     },
     {
       id: 2534342,
@@ -305,6 +335,7 @@ async function getMedias() {
       likes: 25,
       date: "2019-06-21",
       price: 45,
+      alt: "une table decoré pour un mariage",
     },
     {
       id: 65235234,
@@ -314,6 +345,7 @@ async function getMedias() {
       likes: 52,
       date: "2019-06-25",
       price: 45,
+      alt: "portrait d'un couple marié entouré des rochés",
     },
     {
       id: 23523434,
@@ -323,6 +355,7 @@ async function getMedias() {
       likes: 77,
       date: "2019-06-28",
       price: 45,
+      alt: "portrait d'un couple marié en plein air",
     },
     {
       id: 5234343,
@@ -340,6 +373,7 @@ async function getMedias() {
       likes: 59,
       date: "2019-07-02",
       price: 60,
+      alt: "petit oiseau avec des plumes blue, rouge et jeune sur une branche",
     },
 
     {
@@ -350,6 +384,7 @@ async function getMedias() {
       likes: 25,
       date: "2019-04-03",
       price: 60,
+      alt: "deux personnes en train de marcher dans une rue de Kyoto au Japon",
     },
     {
       id: 2523434,
@@ -359,6 +394,7 @@ async function getMedias() {
       likes: 53,
       date: "2019-05-06",
       price: 60,
+      alt: "petit bateau dans le canal de Venise",
     },
     {
       id: 95293534,
@@ -368,6 +404,7 @@ async function getMedias() {
       likes: 33,
       date: "2019-05-12",
       price: 60,
+      alt: "grand lac entouré de montagnes",
     },
     {
       id: 356234343,
@@ -377,6 +414,7 @@ async function getMedias() {
       likes: 53,
       date: "2019-06-20",
       price: 60,
+      alt: "en escalier dans une rue de Paris avec lampadaire",
     },
     {
       id: 235234343,
@@ -386,6 +424,7 @@ async function getMedias() {
       likes: 63,
       date: "2019-06-26",
       price: 60,
+      alt: "porte d'un temple vers les montagnes de l'Inde",
     },
     {
       id: 6234234343,
@@ -395,6 +434,7 @@ async function getMedias() {
       likes: 52,
       date: "2019-06-30",
       price: 60,
+      alt: "détails des domes de Saint Petersburg",
     },
     {
       id: 6525666253,
@@ -404,6 +444,7 @@ async function getMedias() {
       likes: 63,
       date: "2019-07-20",
       price: 60,
+      alt: "maisons dans une falaise au Tibet",
     },
     {
       id: 98252523433,
@@ -413,6 +454,7 @@ async function getMedias() {
       likes: 88,
       date: "2020-01-05",
       price: 60,
+      alt: "détail de la tour de Pisa en Italie",
     },
     {
       id: 9259398453,
@@ -431,6 +473,7 @@ async function getMedias() {
       likes: 54,
       date: "2020-05-05",
       price: 60,
+      alt: "coins d'un batiment avec le mur rouge et toit noir",
     },
     {
       id: 952343423,
@@ -448,6 +491,7 @@ async function getMedias() {
       likes: 101,
       date: "2018-03-05",
       price: 65,
+      alt: "une femme esportif en train de faire d'escalade sur des gros pierres",
     },
     {
       id: 235343222,
@@ -457,6 +501,7 @@ async function getMedias() {
       likes: 103,
       date: "2018-03-10",
       price: 70,
+      alt: "surfeur dans une tunnel d'eau",
     },
     {
       id: 7775342343,
@@ -466,6 +511,7 @@ async function getMedias() {
       likes: 77,
       date: "2018-04-16",
       price: 50,
+      alt: "skieur dans un grand saut",
     },
     {
       id: 9253445784,
@@ -475,6 +521,7 @@ async function getMedias() {
       likes: 88,
       date: "2018-04-22",
       price: 65,
+      alt: "des femmes qui courent dans un stade olimpique",
     },
     {
       id: 22299394,
@@ -484,6 +531,7 @@ async function getMedias() {
       likes: 95,
       date: "2018-04-27",
       price: 70,
+      alt: "un skateur qui fait un saut dans un piste de skate",
     },
     {
       id: 3452342633,
@@ -493,6 +541,7 @@ async function getMedias() {
       likes: 52,
       date: "2018-05-03",
       price: 75,
+      alt: "détail d'un dome blanc d'un batiment modern",
     },
     {
       id: 939234243,
@@ -502,6 +551,7 @@ async function getMedias() {
       likes: 55,
       date: "2018-05-10",
       price: 72,
+      alt: "un batiment avec architecture moderne derrière un bassin d'eau",
     },
     {
       id: 222959233,
@@ -511,6 +561,7 @@ async function getMedias() {
       likes: 85,
       date: "2018-05-15",
       price: 71,
+      alt: "un batiment avec architecture moderne en forme de fer à cheval",
     },
     {
       id: 965933434,
@@ -520,6 +571,7 @@ async function getMedias() {
       likes: 66,
       date: "2018-05-20",
       price: 58,
+      alt: "un batiment avec architecture en forme de croix",
     },
     {
       id: 777723343,
@@ -529,15 +581,17 @@ async function getMedias() {
       likes: 79,
       date: "2018-05-21",
       price: 80,
+      alt: "detail d'un pacerelle d'un batiment avec une architecture courbé",
     },
   ];
+
   // et bien retourner le tableau photographers seulement une fois
   return {
     medias,
   };
 }
 
-async function getPhotographers() {
+async function getPhotographer() {
   // Penser à remplacer par les données récupérées dans le json
   const photographers = [
     {
@@ -548,6 +602,7 @@ async function getPhotographers() {
       tagline: "Voir le beau dans le quotidien",
       price: 400,
       portrait: "MimiKeel.jpg",
+      alt: "portrait de Mimi Keel",
     },
     {
       name: "Ellie-Rose Wilkens",
@@ -557,6 +612,7 @@ async function getPhotographers() {
       tagline: "Capturer des compositions complexes",
       price: 250,
       portrait: "EllieRoseWilkens.jpg",
+      alt: "portrait de Ellie-Rose Wilkens",
     },
     {
       name: "Tracy Galindo",
@@ -566,6 +622,7 @@ async function getPhotographers() {
       tagline: "Photographe freelance",
       price: 500,
       portrait: "TracyGalindo.jpg",
+      alt: "portrait de Tracy Galindo",
     },
     {
       name: "Nabeel Bradford",
@@ -575,6 +632,7 @@ async function getPhotographers() {
       tagline: "Toujours aller de l'avant",
       price: 350,
       portrait: "NabeelBradford.jpg",
+      alt: "portrait de Nabeel Bradford",
     },
     {
       name: "Rhode Dubois",
@@ -584,6 +642,7 @@ async function getPhotographers() {
       tagline: "Je crée des souvenirs",
       price: 275,
       portrait: "RhodeDubois.jpg",
+      alt: "portrait de Rhode Dubois",
     },
     {
       name: "Marcel Nikolic",
@@ -593,22 +652,26 @@ async function getPhotographers() {
       tagline: "Toujours à la recherche de LA photo",
       price: 300,
       portrait: "MarcelNikolic.jpg",
+      alt: "portrait de Marcel Nikolic",
     },
   ];
+
   // et bien retourner le tableau photographers seulement une fois
   return {
     photographers,
   };
 }
 
-async function displayPhotographerData(photographers) {
+async function displayPhotographerData(photograph) {
   const PhotographerSection = document.querySelector(
     ".photograph_header_section"
   );
 
-  const PhotographerPageModel = photographerPageFactory(photographers);
-  const PhotographerDOM = PhotographerPageModel.PhotographerHeaderDOM();
-  PhotographerSection.appendChild(PhotographerDOM);
+  photograph.filter((person) => {
+    const PhotographerPageModel = photographerPageFactory(person);
+    const PhotographerDOM = PhotographerPageModel.PhotographerHeaderDOM();
+    PhotographerSection.appendChild(PhotographerDOM);
+  });
 }
 
 async function displayMediaData(mediasphotographer) {
@@ -623,8 +686,21 @@ async function displayMediaData(mediasphotographer) {
 
 async function initMedia() {
   // Récupère les datas des photographes
-  const { photographers } = await getPhotographers();
-  displayPhotographerData(photographers);
+
+  //Récupère id photographe du URL
+  const IDphotographer = new URLSearchParams(
+    document.location.search.substring(1)
+  );
+  const idURL = IDphotographer.get("id");
+
+  const { photographers } = await getPhotographer();
+
+  //filtre photographe avec id
+  const Showphototgrapher = photographers.filter(
+    (photographer) => photographer.id == idURL
+  );
+
+  displayPhotographerData(Showphototgrapher);
 
   // Récupère les datas des medias
   const { medias } = await getMedias();

@@ -1,14 +1,14 @@
 function photographerFactory(data) {
-  const { name, portrait, city, country, tagline, price, alt } = data;
-
+  const { id, name, portrait, city, country, tagline, price, alt } = data;
   const picture = `./assets/photographers/photographersID/${portrait}`;
 
   function getPhotographerDOM() {
     const $wrapper = document.createElement("div");
     $wrapper.classList.add("photographer_card");
+    $wrapper.classList.add(id);
 
     const photograph = `
-    <a href="./photographer.html?=${name}">
+    <a href="./photographer.html?id=${id}">
       <div class="photographer_img">
         <img src="${picture}" alt="${alt}">
         <h2>${name}</h2>
@@ -22,7 +22,18 @@ function photographerFactory(data) {
     `;
 
     $wrapper.innerHTML = photograph;
+
     return $wrapper;
   }
-  return { getPhotographerDOM };
+  return {
+    id,
+    name,
+    portrait,
+    city,
+    country,
+    tagline,
+    price,
+    alt,
+    getPhotographerDOM,
+  };
 }
