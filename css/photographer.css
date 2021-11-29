@@ -202,13 +202,16 @@ li {
 
 
 
-.photograph-catalog-card img {
-    width: 100%;
+.photograph-catalog-card .card_image,
+.photograph-catalog-card .card_video {
+    display: block;
+    width: 350px;
     height: 300px;
     object-fit: cover;
     object-position: 50% 30%;
     /* width: 100%; */
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .photograph-catalog-info {
