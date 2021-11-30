@@ -2,7 +2,7 @@ function MediaPageFactory(data) {
   const { id, photographerId, video, title, image, likes, date, price, alt } =
     data;
 
-  const catalog = `./assets/photographers/${photographerId}/${image}`;
+  const catalog = `/assets/photographers/${photographerId}/${image}`;
 
   //list media selon id
   function MediaDOM() {
