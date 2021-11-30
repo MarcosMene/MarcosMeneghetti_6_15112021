@@ -1,6 +1,6 @@
 function photographerFactory(data) {
   const { id, name, portrait, city, country, tagline, price, alt } = data;
-  const picture = `./assets/photographers/photographersID/${portrait}`;
+  const picture = `/assets/photographers/photographersID/${portrait}`;
 
   function getPhotographerDOM() {
     const $wrapper = document.createElement("div");
