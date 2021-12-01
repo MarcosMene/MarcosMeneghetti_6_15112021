@@ -242,7 +242,6 @@ li {
 }
 
 .like-heart-click {
-    margin-right: 100px;
     color: #911C1C;
     -webkit-text-stroke-color: #911C1C;
 }
@@ -266,12 +265,12 @@ li {
     font-weight: 700;
 }
 
-.likes-price .totallikes {
+.likes-price .total_likes {
     display: flex;
     align-items: center;
 }
 
-.likes-price .totallikes h3 {
+.likes-price .total_likes h3 {
     margin-right: 10px;
 }
 

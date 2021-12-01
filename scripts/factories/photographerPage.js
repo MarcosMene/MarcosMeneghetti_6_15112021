@@ -19,7 +19,7 @@ function photographerPageFactory(dataPage) {
     </div>
 </div>
 
-  <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+  <button class="contact_button">Contactez-moi</button>
 
   <div class="photograph-img">
     <img src="${picturePage}" alt="${alt}"/>

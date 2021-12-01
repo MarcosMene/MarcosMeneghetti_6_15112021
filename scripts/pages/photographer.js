@@ -672,6 +672,13 @@ async function displayPhotographerData(photograph) {
     const PhotographerDOM = PhotographerPageModel.PhotographerHeaderDOM();
     PhotographerSection.appendChild(PhotographerDOM);
   });
+
+  // buton contact ouvre formulaire
+  const ContactButton = document.querySelector(".contact_button");
+  ContactButton.addEventListener("click", function () {
+    const modal = document.getElementById("contact_modal");
+    modal.style.display = "block";
+  });
 }
 
 async function displayMediaData(mediasphotographer) {
@@ -681,6 +688,15 @@ async function displayMediaData(mediasphotographer) {
     const MediaModel = MediaPageFactory(media);
     const MediaDOM = MediaModel.MediaDOM();
     MediaSection.appendChild(MediaDOM);
+  });
+}
+
+async function displayTotalLikes(photographerLike) {
+  const TotalLikesSection = document.querySelector(".main");
+  photographerLike.forEach((likes) => {
+    const TotalLikesModel = TotalLikesFactory(likes);
+    const TotalLikesDOM = TotalLikesModel.TotalLikesDOM();
+    TotalLikesSection.append(TotalLikesDOM);
   });
 }
 
@@ -701,11 +717,11 @@ async function initMedia() {
       const { media } = data;
 
       //filtre photographe avec id
-      const Showphototgrapher = photographers.filter(
+      const Showphotographer = photographers.filter(
         (photographer) => photographer.id == idURL
       );
 
-      displayPhotographerData(Showphototgrapher);
+      displayPhotographerData(Showphotographer);
 
       // Récupère les datas des medias
 
@@ -714,8 +730,19 @@ async function initMedia() {
         (media) => media.photographerId == idURL
       );
 
+      let totallikes = 0;
+
+      ShowMediaphototgrapher.forEach((media) => {
+        totallikes = totallikes + media.likes;
+      });
+      console.log(totallikes);
       displayMediaData(ShowMediaphototgrapher);
+
+      //filtre media avec id
+
+      displayTotalLikes(Showphotographer);
+      const tst = document.querySelector(".total_likes_txt");
+      tst.innerHTML = totallikes;
     });
 }
-
 initMedia();
