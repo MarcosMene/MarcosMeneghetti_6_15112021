@@ -217,22 +217,34 @@ li {
 .photograph-catalog-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-size: 1.5em;
+    align-items: flex-end;
+    font-size: 1.6em;
     line-height: 31px;
     color: #901C1C;
 }
 
 .photograph-catalog-icon {
     display: flex;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.photograph-catalog-icon i {
+.photograph-catalog-icon .like_img {
     font-size: .8em;
-    display: flex;
-    align-items: center;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #911C1C;
+    transition: color 400ms;
+    cursor: pointer;
+    margin-right: 10px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+.like-heart-click {
+    margin-right: 100px;
+    color: #911C1C;
+    -webkit-text-stroke-color: #911C1C;
 }
 
 /* likes-prices 
@@ -254,12 +266,12 @@ li {
     font-weight: 700;
 }
 
-.likes-price .like {
+.likes-price .totallikes {
     display: flex;
     align-items: center;
 }
 
-.likes-price .like h3 {
+.likes-price .totallikes h3 {
     margin-right: 10px;
 }
 
