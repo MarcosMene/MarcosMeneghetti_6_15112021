@@ -691,6 +691,16 @@ async function displayMediaData(mediasphotographer) {
   });
 }
 
+async function displayContactForm(photographerNameCard) {
+  const cardFormSection = document.getElementById("contact_modal");
+
+  photographerNameCard.forEach((name) => {
+    const cardFormModel = contactFormFactory(name);
+    const cardFormDOM = cardFormModel.contactFormDOM();
+    cardFormSection.appendChild(cardFormDOM);
+  });
+}
+
 async function displayTotalLikes(photographerLike) {
   const TotalLikesSection = document.querySelector(".main");
   photographerLike.forEach((likes) => {
@@ -700,7 +710,7 @@ async function displayTotalLikes(photographerLike) {
   });
 }
 
-async function initMedia() {
+async function initPhotographer() {
   // Récupère les datas des photographes
   fetch("./data/photographers.json")
     .then((response) => response.json())
@@ -723,26 +733,28 @@ async function initMedia() {
 
       displayPhotographerData(Showphotographer);
 
-      // Récupère les datas des medias
-
       //filtre media avec id
       const ShowMediaphototgrapher = media.filter(
         (media) => media.photographerId == idURL
       );
 
+      // variable accumule likes photographer
       let totallikes = 0;
 
+      // calcule total de likes par photographe
       ShowMediaphototgrapher.forEach((media) => {
         totallikes = totallikes + media.likes;
       });
-      console.log(totallikes);
+
+      // display images par photographe
       displayMediaData(ShowMediaphototgrapher);
 
-      //filtre media avec id
-
+      //display filtre likes footer
       displayTotalLikes(Showphotographer);
       const tst = document.querySelector(".total_likes_txt");
       tst.innerHTML = totallikes;
+
+      displayContactForm(Showphotographer);
     });
 }
-initMedia();
+initPhotographer();
