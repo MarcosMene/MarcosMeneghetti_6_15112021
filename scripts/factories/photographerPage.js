@@ -1,7 +1,7 @@
 function photographerPageFactory(dataPage) {
   const { id, name, portrait, city, country, tagline, alt } = dataPage;
 
-  const picturePage = `./assets/photographers/photographersID/${portrait}`;
+  const picturePage = `./assets/photographers/PhotographersID/${portrait}`;
 
   function PhotographerHeaderDOM() {
     const $wrapperHeader = document.createElement("div");
@@ -19,7 +19,7 @@ function photographerPageFactory(dataPage) {
     </div>
 </div>
 
-  <button class="contact_button">Contactez-moi</button>
+  <button class="contact_me contact_button">Contactez-moi</button>
 
   <div class="photograph-img">
     <img src="${picturePage}" alt="${alt}"/>
