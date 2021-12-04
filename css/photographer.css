@@ -1,6 +1,3 @@
-/* #contact_modal {
-    display: none;
-} */
 
 
 
@@ -394,14 +391,36 @@ li {
     padding: 15px 35px;
     margin: 5% auto;
     position: relative;
-    height: 900px;
+    /* height: 950px; */
 }
+
+
+/* error messages  */
+
+/* hide error messages  */
+.firstName_error,
+.lastName_error,
+.email_error,
+.your_message_error {
+    display: none;
+}
+
+/* color error message  */
+.error_msn {
+    font-size: 1em;
+    font-weight: bold;
+    color: #000;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+
 
 .modal .modal-title {
     width: 100%;
 }
 
-.modal .close-form {
+.modal .close_form {
     cursor: pointer;
     position: absolute;
     top: 30px;
@@ -435,15 +454,18 @@ li {
     width: 100%;
     border: none;
     border-radius: 5px;
+    font-size: 1.8em;
+    padding: 0 10px;
 }
 
 .modal form input {
     height: 68px;
-    font-size: 1.8em;
+
 }
 
 .modal textarea {
     height: 170px;
+    padding-top: 10px;
 }
 
 .modal form div {

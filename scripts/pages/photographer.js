@@ -674,21 +674,11 @@ async function displayPhotographerData(photograph) {
   });
 
   // buton contact ouvre formulaire
-  const ContactButton = document.querySelector(".contact_button");
-  ContactButton.addEventListener("click", function () {
-    const modal = document.getElementById("contact_modal");
-    modal.style.display = "block";
-  });
-}
-
-async function displayMediaData(mediasphotographer) {
-  const MediaSection = document.querySelector(".photograph-catalog-cards");
-
-  mediasphotographer.forEach((media) => {
-    const MediaModel = MediaPageFactory(media);
-    const MediaDOM = MediaModel.MediaDOM();
-    MediaSection.appendChild(MediaDOM);
-  });
+  // const ContactButton = document.querySelector(".contact_me");
+  // ContactButton.addEventListener("click", function () {
+  //   const modal = document.getElementById("contact_modal");
+  //   modal.style.display = "block";
+  // });
 }
 
 async function displayContactForm(photographerNameCard) {
@@ -699,6 +689,9 @@ async function displayContactForm(photographerNameCard) {
     const cardFormDOM = cardFormModel.contactFormDOM();
     cardFormSection.appendChild(cardFormDOM);
   });
+
+  // fill form
+  fillForm();
 }
 
 async function displayTotalLikes(photographerLike) {
@@ -707,6 +700,16 @@ async function displayTotalLikes(photographerLike) {
     const TotalLikesModel = TotalLikesFactory(likes);
     const TotalLikesDOM = TotalLikesModel.TotalLikesDOM();
     TotalLikesSection.append(TotalLikesDOM);
+  });
+}
+
+async function displayMediaData(mediasphotographer) {
+  const MediaSection = document.querySelector(".photograph-catalog-cards");
+
+  mediasphotographer.forEach((media) => {
+    const MediaModel = MediaPageFactory(media);
+    const MediaDOM = MediaModel.MediaDOM();
+    MediaSection.appendChild(MediaDOM);
   });
 }
 
@@ -738,6 +741,9 @@ async function initPhotographer() {
         (media) => media.photographerId == idURL
       );
 
+      // display formulaire
+      displayContactForm(Showphotographer);
+
       // variable accumule likes photographer
       let totallikes = 0;
 
@@ -753,8 +759,6 @@ async function initPhotographer() {
       displayTotalLikes(Showphotographer);
       const tst = document.querySelector(".total_likes_txt");
       tst.innerHTML = totallikes;
-
-      displayContactForm(Showphotographer);
     });
 }
 initPhotographer();
