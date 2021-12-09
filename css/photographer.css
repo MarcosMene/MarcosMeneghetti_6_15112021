@@ -1,4 +1,6 @@
-
+.hide {
+    display: none;
+}
 
 
 .photograph-header {
@@ -96,69 +98,74 @@
 */
 
 .select-dropdown {
-    display: flex;
+    display: inline-flex;
     position: relative;
     margin-top: 10px;
+    font-size: 1.125em;
 
 }
 
-.select-dropdown h3 {
+.select-dropdown .sort_medias {
+    display: block;
+}
+
+.select-dropdown label {
     margin: 0;
     padding: 0;
     margin-right: 20px;
-    font-size: 1.125em;
+    /* font-size: 1.125em; */
     font-weight: 700;
 }
 
 
-
-.select-dropdown .dropdown {
-    position: absolute;
-    top: 0;
-    left: 87px;
-    z-index: 20px;
-    display: none;
-}
-
-
-.select-dropdown span {
-    border-radius: 5px;
-    z-index: 40px;
-}
-
-
-
-.select-dropdown li:first-child {
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-}
-
-.select-dropdown li:last-child {
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-}
-
-.select-dropdown span,
-li {
-    width: 172px;
-    height: 69px;
-    background-color: #911C1C;
+.select-dropdown select {
+    width: 170px;
+    height: 70px;
+    font-weight: bold;
+    color: white;
+    padding: 11px 15px;
     border: none;
-    font-size: 1.125em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    position: relative;
+    background-color: #901C1C;
+    border-radius: 5px;
     cursor: pointer;
 
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    outline: none;
+
 }
+
+.select-dropdown select option {
+    line-height: 30px;
+    background-color: #901C1C;
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+
 
 
 
 .select-dropdown i {
-    margin-left: 30px;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    color: white;
+    font-size: 1.125em;
+    pointer-events: none;
+
 }
+
+
+
+/* .select-dropdown i {
+    margin-left: 30px;
+} */
+
+
 
 /* arrow up select-dropdown */
 /* .select-dropdown i:not(:first-child) {
@@ -167,7 +174,7 @@ li {
 
 
 
-.select-dropdown li:not(:first-child):before {
+/* .select-dropdown li:not(:first-child):before {
     content: "";
     width: 150px;
     height: 1px;
@@ -176,7 +183,7 @@ li {
     top: 0;
 
 
-}
+} */
 
 /* photographers catalog image *
 ***
@@ -224,6 +231,7 @@ li {
     display: flex;
     align-items: center;
     margin-top: 10px;
+
 }
 
 .photograph-catalog-icon .like_img {
@@ -236,6 +244,11 @@ li {
     margin-right: 10px;
     margin-left: 10px;
     cursor: pointer;
+}
+
+.photograph-catalog-icon .like_img:hover {
+    color: #911C1C;
+    -webkit-text-stroke-color: #911C1C;
 }
 
 .like-heart-click {
@@ -280,7 +293,7 @@ li {
 *****
 */
 
-.lightbox-modal {
+.lightbox_modal {
     position: fixed;
     width: 100%;
     height: 100vh;
@@ -294,19 +307,19 @@ li {
 
 }
 
-.lightbox-modal .modal-carousel {
+.lightbox_modal .modal_carousel {
     width: 50%;
-    height: 80%;
+    height: 90%;
     background-color: #fff;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 80px;
+    padding: 40px 80px;
 
 }
 
-.lightbox-modal .carousel {
+.lightbox_modal .carousel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -314,18 +327,18 @@ li {
     width: 100%;
 }
 
-.lightbox-modal .carousel-item {
+.lightbox_modal .carousel_item {
     height: 100%;
     width: 100%;
 }
 
-.lightbox-modal .carousel-img {
-    height: 100%;
+.lightbox_modal .carousel_img {
+    height: 95%;
     width: 100%;
     cursor: default;
 }
 
-.lightbox-modal .carousel-img img {
+.lightbox_modal .carousel_img img {
     width: 100%;
     height: 100%;
     display: block;
@@ -333,8 +346,15 @@ li {
     pointer-events: none;
 }
 
+.lightbox_modal .title_img {
+    font-size: 1.5em;
+    color: #901C1C;
+    margin-top: 10px;
+    margin-bottom: 100px;
+}
 
-.lightbox-modal .controls {
+
+.lightbox_modal .controls {
     position: absolute;
     font-size: 40px;
     color: #901C1C;
@@ -343,15 +363,15 @@ li {
     cursor: pointer;
 }
 
-.lightbox-modal .controls-left {
-    left: -50px;
+.lightbox_modal .controls-left {
+    left: 20px;
 }
 
-.lightbox-modal .controls-right {
-    right: -50px;
+.lightbox_modal .controls_right {
+    right: 20px;
 }
 
-.lightbox-modal .modal-close-btn {
+.lightbox_modal .modal_close_btn {
     position: absolute;
     top: 15px;
     right: 15px;
