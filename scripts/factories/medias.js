@@ -26,7 +26,7 @@ function MediaPageFactory(data) {
           <p>${title}</p>
        </div>
         <div class="photograph-catalog-icon">
-            <p>${likes}</p>
+            <p class="photograph-catalog-like">${likes}</p>
             <i class="fas fa-heart like_img" arial-label="likes"></i>
          </div>
        </div>

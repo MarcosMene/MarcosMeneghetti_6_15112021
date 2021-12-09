@@ -7,8 +7,10 @@ function lightboxShow() {
     modalLightBox.style.display = "none";
   });
 
+  // select all videos
   const imageSelected = document.querySelectorAll(".media_link");
 
+  // click for all videos
   for (const imgClicked of imageSelected) {
     imgClicked.addEventListener("click", (event) => {
       event.preventDefault();

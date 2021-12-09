@@ -239,94 +239,9 @@ function fillForm() {
 
       // prevent refresh page
       e.preventDefault();
-      console.log(firstName.value);
-      console.log(lastName.value);
-      console.log(email.value);
-      console.log(textMessage.value);
 
       //the page will be not refresh when submit button will be clicked
       formPhotograph.reset();
-
-      // hide modal photographer form
-      // modal.style.display = "none";
     }
-
-    // else if (firstName.value === "") {
-    //   firstNameError.innerHTML = "Le prénom ne doit pas être vide";
-    //   firstNameError.style.display = "inline";
-    //   firstName.style.border = "4px solid red";
-    //   submitBtn.setAttribute("disabled", true);
-    // } else if (firstName.value !== "") {
-    //   if (firstName.value.match(format_txt)) {
-    //     firstNameError.innerHTML =
-    //       "Le prénom ne doit pas contenir des symboles";
-    //     firstNameError.style.display = "inline";
-    //     firstName.style.border = "4px solid red";
-    //     submitBtn.setAttribute("disabled", true);
-    //   } else if (firstName.value.length > 20) {
-    //     firstNameError.innerHTML =
-    //       "Le prénom ne doit pas être plus grande que 20 caractères";
-    //     firstNameError.style.display = "inline";
-    //     firstName.style.border = "4px solid red";
-    //     submitBtn.setAttribute("disabled", true);
-    //   } else {
-    //     firstNameError.style.display = "none";
-    //     firstName.style.border = "4px solid #51d115";
-    //   }
-    // }
-    // if (lastName.value === "") {
-    //   lastNameError.innerHTML = "Le nom ne doit pas être vide";
-    //   lastNameError.style.display = "inline";
-    //   lastName.style.border = "4px solid red";
-    //   submitBtn.setAttribute("disabled", true);
-    // } else if (lastName.value !== "") {
-    //   if (lastName.value.match(format_txt)) {
-    //     lastNameError.innerHTML = "Le nom ne doit pas contenir des symboles";
-    //     lastNameError.style.display = "inline";
-    //     lastName.style.border = "4px solid red";
-    //     submitBtn.setAttribute("disabled", true);
-    //   } else if (lastName.value.length > 20) {
-    //     lastNameError.innerHTML =
-    //       "Le nom ne doit pas être plus grande que 20 caractères";
-    //     lastNameError.style.display = "inline";
-    //     lastName.style.border = "4px solid red";
-    //     submitBtn.setAttribute("disabled", true);
-    //   } else {
-    //     lastNameError.style.display = "none";
-    //     lastName.style.border = "4px solid #51d115";
-    //   }
-
-    //   // verify if email is empty
-    // }
-    // if (email.value === "") {
-    //   emailError.innerHTML = "Le nom ne doit pas être vide";
-    //   emailError.style.display = "inline";
-    //   email.style.border = "4px solid red";
-    //   submitBtn.setAttribute("disabled", true);
-    // } else if (email.value !== "") {
-    //   if (email.value.match(format_txt)) {
-    //     emailError.innerHTML = "Le nom ne doit pas contenir des symboles";
-    //     emailError.style.display = "inline";
-    //     email.style.border = "4px solid red";
-    //     submitBtn.setAttribute("disabled", true);
-    //   } else {
-    //     emailError.style.display = "none";
-    //     email.style.border = "4px solid #51d115";
-    //   }
-    // } else if (textMessage.value === "") {
-    //   textMessageError.innerHTML = "Le nom ne doit pas être vide";
-    //   textMessageError.style.display = "inline";
-    //   textMessage.style.border = "4px solid red";
-    //   submitBtn.setAttribute("disabled", true);
-    // } else {
-    //   textMessageError.style.display = "none";
-    //   textMessage.style.border = "4px solid #51d115";
-    // }
-
-    // formPhotograph.reset();
-
-    //the page will be not refresh when submit button will be clicked
-
-    // modal.style.display = "none";
   });
 }

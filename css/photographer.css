@@ -239,6 +239,8 @@
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #911C1C;
+    color: #911C1C;
+
     transition: color 400ms;
     cursor: pointer;
     margin-right: 10px;
@@ -246,15 +248,12 @@
     cursor: pointer;
 }
 
-.photograph-catalog-icon .like_img:hover {
+/* .photograph-catalog-icon .like_img:hover {
     color: #911C1C;
     -webkit-text-stroke-color: #911C1C;
-}
+} */
 
-.like-heart-click {
-    color: #911C1C;
-    -webkit-text-stroke-color: #911C1C;
-}
+
 
 /* likes-prices 
 *****

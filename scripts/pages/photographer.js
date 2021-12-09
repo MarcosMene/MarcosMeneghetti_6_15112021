@@ -46,8 +46,7 @@ function displayMediaData(mediasphotographer, filterBy) {
 
   let mediasphotographerFiltered = null;
 
-  console.log(mediasphotographerFiltered);
-
+  //  filter medias by type
   mediasphotographerFiltered = mediasphotographer.sort((a, b) => {
     return a.likes - b.likes;
   });
@@ -73,13 +72,15 @@ function displayMediaData(mediasphotographer, filterBy) {
       return new Date(b.date) - new Date(a.date);
     });
   }
+
+  // empty mediaSection
   MediaSection.innerHTML = "";
   mediasphotographerFiltered.forEach((media) => {
     const MediaModel = MediaPageFactory(media);
     const MediaDOM = MediaModel.MediaDOM();
     MediaSection.appendChild(MediaDOM);
   });
-  console.log(mediasphotographerFiltered);
+
   // click each image for lightbox
   lightboxShow();
 }
@@ -114,39 +115,60 @@ function initPhotographer() {
         (media) => media.photographerId == idURL
       );
 
+      // display sort images for photographer
+
+      // get info sort by button
+      const sortByType = document.getElementById("select_images");
+
+      if (sortByType.value == "popularity") {
+        displayMediaData(ShowMediaphototgrapher, "popularity");
+      }
+
+      sortByType.addEventListener("change", (e) => {
+        // const hideByType = document.querySelectorAll(
+        //   ".photograph-catalog-card"
+        // );
+        if (e.target.value === "popularity") {
+          displayMediaData(ShowMediaphototgrapher, "popularity");
+          console.log("+++++++");
+        }
+        if (e.target.value === "date") {
+          displayMediaData(ShowMediaphototgrapher, "date");
+          console.log("******");
+        }
+        if (e.target.value === "title") {
+          displayMediaData(ShowMediaphototgrapher, "title");
+          console.log("----");
+        }
+      });
+      console.log("ne passe plus par ici une fois que je change le trie");
+
       // variable accumule likes photographer
       let totallikes = 0;
+      console.log(totallikes);
 
       // calcule total de likes par photographe
       ShowMediaphototgrapher.forEach((media) => {
         totallikes = totallikes + media.likes;
       });
 
-      // display sort images for photographer
-
-      displayMediaData(ShowMediaphototgrapher, "popularity");
-
-      // get info sort by button
-      const sortByType = document.getElementById("select_images");
-      sortByType.addEventListener("change", (e) => {
-        const hideByType = document.querySelectorAll(
-          ".photograph-catalog-card"
-        );
-        if (e.target.value === "date") {
-          displayMediaData(ShowMediaphototgrapher, "date");
-        }
-        if (e.target.value === "title") {
-          displayMediaData(ShowMediaphototgrapher, "title");
-        }
-        if (e.target.value === "popularity") {
-          displayMediaData(ShowMediaphototgrapher, "popularity");
-        }
-      });
-
-      //display filtre likes footer
+      //display total likes footer
       displayTotalLikes(Showphotographer);
-      const tst = document.querySelector(".total_likes_txt");
-      tst.innerHTML = totallikes;
+      const totalLikesText = document.querySelector(".total_likes_txt");
+      totalLikesText.innerHTML = totallikes;
+
+      const clickLikes = document.querySelectorAll(".like_img");
+
+      let countLikedClicked = 0;
+
+      // click for all hearts images
+      for (const clickHearts of clickLikes) {
+        clickHearts.addEventListener("click", () => {
+          countLikedClicked += 1;
+          console.log(countLikedClicked);
+          totalLikesText.innerHTML = totallikes + countLikedClicked;
+        });
+      }
 
       // display formulaire
       displayContactForm(Showphotographer);
