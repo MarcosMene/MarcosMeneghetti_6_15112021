@@ -1,1 +1,15 @@
+function AddClickHeart() {
+  const totalLikesText = document.querySelector(".total_likes_txt");
 
+  const clickLikes = document.querySelectorAll(".like_img");
+
+  // click for all hearts images
+  for (const clickHeart of clickLikes) {
+    clickHeart.addEventListener("click", () => {
+      let siblingClick = clickHeart.previousElementSibling;
+
+      siblingClick.innerHTML = parseInt(siblingClick.innerHTML) + 1;
+      totalLikesText.innerHTML = parseInt(totalLikesText.innerHTML) + 1;
+    });
+  }
+}

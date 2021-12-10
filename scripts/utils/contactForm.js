@@ -239,6 +239,10 @@ function fillForm() {
 
       // prevent refresh page
       e.preventDefault();
+      console.log(firstName.value);
+      console.log(lastName.value);
+      console.log(email.value);
+      console.log(textMessage.value);
 
       //the page will be not refresh when submit button will be clicked
       formPhotograph.reset();

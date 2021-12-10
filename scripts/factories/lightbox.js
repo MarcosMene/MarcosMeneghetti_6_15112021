@@ -1,7 +1,7 @@
-function lightboxDOM(){
-    const $wrapper = document.createElement("div")
-    let ligthboxImages = ""
-    ligthboxImages = `
+function lightboxDOM() {
+  const $wrapper = document.createElement("div");
+  let ligthboxImages = "";
+  ligthboxImages = `
     <ul class="carousel" arial-label="Les photos de Mimi">
 
     <li class="carousel_item item_0" aria-hidden="false">
@@ -28,7 +28,7 @@ function lightboxDOM(){
 
 
 
-    `
-$wrapper.innerHTML = ligthboxImages
-return $wrapper
+    `;
+  $wrapper.innerHTML = ligthboxImages;
+  return $wrapper;
 }

@@ -3,7 +3,7 @@ function TotalLikesFactory(data) {
 
   //list media selon id
   function TotalLikesDOM() {
-    const $wrapper = document.createElement("aside");
+    const $wrapper = document.createElement("div");
     $wrapper.classList.add("likes-price");
 
     let cardTotalLikes = "";

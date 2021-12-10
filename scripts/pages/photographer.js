@@ -32,14 +32,6 @@ function displayContactForm(photographerNameCard) {
   fillForm();
 }
 
-function displayTotalLikes(photographerLike) {
-  const TotalLikesSection = document.querySelector(".main");
-  photographerLike.forEach((likes) => {
-    const TotalLikesModel = TotalLikesFactory(likes);
-    const TotalLikesDOM = TotalLikesModel.TotalLikesDOM();
-    TotalLikesSection.append(TotalLikesDOM);
-  });
-}
 // display images by photographer
 function displayMediaData(mediasphotographer, filterBy) {
   const MediaSection = document.querySelector(".photograph-catalog-cards");
@@ -85,6 +77,15 @@ function displayMediaData(mediasphotographer, filterBy) {
   lightboxShow();
 }
 
+function displayTotalLikes(photographerLike) {
+  const TotalLikesSection = document.querySelector(".likes-footer");
+  photographerLike.forEach((likes) => {
+    const TotalLikesModel = TotalLikesFactory(likes);
+    const TotalLikesDOM = TotalLikesModel.TotalLikesDOM();
+    TotalLikesSection.append(TotalLikesDOM);
+  });
+}
+
 function initPhotographer() {
   // Récupère les datas des photographes
   fetch("./data/photographers.json")
@@ -118,18 +119,41 @@ function initPhotographer() {
       // display sort images for photographer
 
       // get info sort by button
+
+      displayMediaData(ShowMediaphototgrapher, "popularity");
+
+      // variable accumule likes photographer
+      let totallikes = 0;
+
+      // calcule total de likes par photographe
+      ShowMediaphototgrapher.forEach((media) => {
+        totallikes = totallikes + media.likes;
+      });
+      // const clickLikes = document.querySelectorAll(".like_img");
+
+      // let countLikedClicked = 0;
+      //display total likes footer
+      displayTotalLikes(Showphotographer);
+      const totalLikesText = document.querySelector(".total_likes_txt");
+      totalLikesText.innerHTML = totallikes;
+      AddClickHeart();
+      // // click for all hearts images
+      // for (const clickHeart of clickLikes) {
+      //   clickHeart.addEventListener("click", () => {
+      //     countLikedClicked += 1;
+      //     console.log(countLikedClicked);
+      //     let siblingClick = clickHeart.previousElementSibling;
+
+      //     siblingClick.innerHTML = parseInt(siblingClick.innerHTML) + 1;
+      //     totalLikesText.innerHTML = totallikes + countLikedClicked;
+      //   });
+      // }
       const sortByType = document.getElementById("select_images");
 
-      if (sortByType.value == "popularity") {
-        displayMediaData(ShowMediaphototgrapher, "popularity");
-      }
-
       sortByType.addEventListener("change", (e) => {
-        // const hideByType = document.querySelectorAll(
-        //   ".photograph-catalog-card"
-        // );
         if (e.target.value === "popularity") {
           displayMediaData(ShowMediaphototgrapher, "popularity");
+
           console.log("+++++++");
         }
         if (e.target.value === "date") {
@@ -140,35 +164,8 @@ function initPhotographer() {
           displayMediaData(ShowMediaphototgrapher, "title");
           console.log("----");
         }
+        AddClickHeart();
       });
-      console.log("ne passe plus par ici une fois que je change le trie");
-
-      // variable accumule likes photographer
-      let totallikes = 0;
-      console.log(totallikes);
-
-      // calcule total de likes par photographe
-      ShowMediaphototgrapher.forEach((media) => {
-        totallikes = totallikes + media.likes;
-      });
-
-      //display total likes footer
-      displayTotalLikes(Showphotographer);
-      const totalLikesText = document.querySelector(".total_likes_txt");
-      totalLikesText.innerHTML = totallikes;
-
-      const clickLikes = document.querySelectorAll(".like_img");
-
-      let countLikedClicked = 0;
-
-      // click for all hearts images
-      for (const clickHearts of clickLikes) {
-        clickHearts.addEventListener("click", () => {
-          countLikedClicked += 1;
-          console.log(countLikedClicked);
-          totalLikesText.innerHTML = totallikes + countLikedClicked;
-        });
-      }
 
       // display formulaire
       displayContactForm(Showphotographer);
