@@ -158,7 +158,7 @@ function fillForm() {
       firstNameError.style.display = "inline";
       firstName.style.border = "4px solid red";
       submitBtn.setAttribute("disabled", true);
-    } else if (firstName.value < 2) {
+    } else if (firstName.value.length < 2) {
       firstNameError.innerHTML =
         "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
       firstNameError.style.display = "inline";
@@ -170,9 +170,7 @@ function fillForm() {
       firstNameError.style.display = "inline";
       firstName.style.border = "4px solid red";
       submitBtn.setAttribute("disabled", true);
-    } else if (
-      firstName.value.match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/)
-    ) {
+    } else if (firstName.value.match(/[ !@#$%^&*()_+\=\[\]{};':"\\|,.<>\/?]/)) {
       firstNameError.innerHTML =
         "Le prénom ne doit pas avoir des espaces et symboles";
       firstNameError.style.display = "inline";
@@ -183,7 +181,7 @@ function fillForm() {
       lastNameError.style.display = "inline";
       lastName.style.border = "4px solid red";
       submitBtn.setAttribute("disabled", true);
-    } else if (lastName.value < 2) {
+    } else if (lastName.value.length < 2) {
       lastNameError.innerHTML =
         "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
       lastNameError.style.display = "inline";
@@ -195,7 +193,7 @@ function fillForm() {
       lastNameError.style.display = "inline";
       lastName.style.border = "4px solid red";
       submitBtn.setAttribute("disabled", true);
-    } else if (lastName.value.match(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/)) {
+    } else if (lastName.value.match(/[ !@#$%^&*()_+\=\[\]{};':"\\|,.<>\/?]/)) {
       lastNameError.innerHTML =
         "Le nom ne doit pas avoir des espaces et symboles";
       lastNameError.style.display = "inline";
@@ -239,10 +237,10 @@ function fillForm() {
 
       // prevent refresh page
       e.preventDefault();
-      console.log(firstName.value);
-      console.log(lastName.value);
-      console.log(email.value);
-      console.log(textMessage.value);
+      console.log("Prénom: " + firstName.value);
+      console.log("Nom: " + lastName.value);
+      console.log("Email: " + email.value);
+      console.log("Votre message: " + textMessage.value);
 
       //the page will be not refresh when submit button will be clicked
       formPhotograph.reset();
