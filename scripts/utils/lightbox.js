@@ -1,12 +1,4 @@
-// close lightbox modal
 function lightboxShow() {
-  // close lightboxmodal
-  const closeLightBoxModal = document.querySelector(".modal_close_btn");
-  closeLightBoxModal.addEventListener("click", () => {
-    const modalLightBox = document.querySelector(".lightbox_modal");
-    modalLightBox.style.display = "none";
-  });
-
   // select all videos
   const imageSelected = document.querySelectorAll(".media_link");
 
@@ -18,4 +10,19 @@ function lightboxShow() {
       modalLightBox.style.display = "flex";
     });
   }
+  // close lightboxmodal
+  const closeLightBoxModal = document.querySelector(".modal_close_btn");
+  closeLightBoxModal.addEventListener("click", () => {
+    const modalLightBox = document.querySelector(".lightbox_modal");
+    modalLightBox.style.display = "none";
+  });
+
+  const linkPrevLightBox = document.querySelector(".prev_image");
+  linkPrevLightBox.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
+  const linkNextLightBox = document.querySelector(".next_image");
+  linkNextLightBox.addEventListener("click", (event) => {
+    event.preventDefault();
+  });
 }
