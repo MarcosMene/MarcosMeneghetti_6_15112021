@@ -303,12 +303,13 @@
     align-items: center;
     justify-content: center;
     /* display: none; */
+    z-index: 2000;
 
 }
 
 .lightbox_modal .modal_carousel {
-    width: 60%;
-    height: 90%;
+    width: 1140px;
+    height: 684px;
     background-color: #fff;
     position: relative;
     display: flex;
@@ -331,19 +332,21 @@
 .lightbox_modal .modal_media img,
 .lightbox_modal .modal_media video {
     width: 80%;
-    height: 80%;
+    height: 85%;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
+
     /* pointer-events: none; */
-    margin: 20px auto;
+    margin: 30px auto 10px;
 }
 
 .lightbox_modal p {
     font-size: 1.2em;
     color: #901C1C;
-    margin-top: 10px;
-    margin-left: 90px;
+    margin-top: 20px;
+    /* margin-left: 130px; */
     margin-bottom: 100px;
+    text-align: center;
 }
 
 
