@@ -1,4 +1,7 @@
 function lightboxShow() {
+  const modalLightBox = document.querySelector(".lightbox_modal");
+  modalLightBox.style.display = "none";
+
   // select all videos
   const imageSelected = document.querySelectorAll(".media_link");
 
