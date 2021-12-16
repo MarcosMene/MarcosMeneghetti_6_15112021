@@ -1,6 +1,18 @@
+/* general  */
+
 .hide {
     display: none;
 }
+
+.show {
+    display: inline;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
 
 
 .photograph-header {
@@ -21,6 +33,18 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+.contact_button:hover,
+.contact_button:focus {
+    color: #000;
+    background-color: #db8876;
+    outline: none;
+
+}
+
+/* general  */
+
+
 
 
 
@@ -48,7 +72,7 @@
 .photograph_header h1 {
     color: #D3573C;
     font-size: 4rem;
-    /* margin: 0; */
+    margin: 0;
     line-height: 83px;
     font-weight: 400;
 }
@@ -76,6 +100,8 @@
     margin-left: 5%;
     margin-right: auto;
 }
+
+
 
 .photograph_header .photograph-img {
     display: flex;
@@ -128,24 +154,32 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     text-indent: 1px;
     text-overflow: '';
     outline: none;
 
+    /* hide arrow selector  */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
-.select-dropdown select option {
+
+
+.select-dropdown option {
     line-height: 30px;
     background-color: #901C1C;
     position: absolute;
     top: 0;
     left: 50px;
+    outline: none;
 }
 
+.select-dropdown option:hover {
+
+    background-color: #901C1C;
+    color: green;
+}
 
 
 
@@ -159,6 +193,13 @@
 
 }
 
+/* rotation button sort popularity/date/title  */
+.rotated {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
 
 
 /* .select-dropdown i {
@@ -222,20 +263,26 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    font-size: 1.6em;
+
+
+}
+
+.photograph-catalog-info h3 {
+
+    font-size: 1.28em;
     line-height: 31px;
     color: #901C1C;
+    font-weight: normal;
 }
 
 .photograph-catalog-icon {
     display: flex;
     align-items: center;
     margin-top: 10px;
-
 }
 
 .photograph-catalog-icon .like_img {
-    font-size: .8em;
+    font-size: 1.2em;
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #911C1C;
@@ -255,8 +302,8 @@
 
 
 
-/* likes-prices 
-*****
+/* 
+*****likes-prices 
 */
 
 .likes-price {
@@ -288,8 +335,8 @@
 
 
 
-/* light box modal 
-*****
+/*  
+*****light box modal
 */
 
 .lightbox_modal {
@@ -302,7 +349,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* display: none; */
+    display: none;
     z-index: 2000;
 
 }
@@ -340,7 +387,7 @@
     margin: 30px auto 10px;
 }
 
-.lightbox_modal p {
+.lightbox_modal h3 {
     font-size: 1.2em;
     color: #901C1C;
     margin-top: 20px;
@@ -357,30 +404,83 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+
+}
+
+.lightbox_modal .control_btn {
+    width: 100%;
 }
 
 .lightbox_modal .controls-left {
-    left: 20px;
+    left: 30px;
+    border: 1px solid transparent;
 }
 
+
 .lightbox_modal .controls_right {
-    right: 20px;
+    right: 30px;
+    border: 1px solid transparent;
 }
+
+
+
+.lightbox_modal .controls_right:hover,
+.lightbox_modal .controls-left:hover,
+.lightbox_modal .controls_right:focus,
+.lightbox_modal .controls-left:focus {
+    outline: none;
+    border: 1px solid #901C1C;
+
+}
+
+
+.lightbox_modal i {
+    padding: 0 20px;
+
+}
+
+.lightbox_modal i {
+    padding: 0 20px;
+}
+
+
 
 .lightbox_modal .modal_close_btn {
     position: absolute;
-    top: 15px;
+    top: 30px;
     right: 15px;
-    font-size: 42px;
+    font-size: 20px;
     z-index: 400;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    padding: 2px;
     background-color: transparent;
-    color: #901C1C;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* contact form 
-**
+.lightbox_modal .modal_close_btn:hover,
+.lightbox_modal .modal_close_btn:focus {
+    background-color: #f2bdbd;
+    outline: none;
+    border: 2px solid #901C1C;
+}
+
+.lightbox_modal .modal_close_btn img {
+    color: #901C1C;
+    width: 70%;
+    height: 70%;
+
+
+
+}
+
+/* 
+**contact form 
  */
 
 #contact_modal {
@@ -466,7 +566,7 @@
 
 .modal form label {
     color: #312E2E;
-    font-size: 2.25em;
+    font-size: 2em;
     line-height: 46.87px;
 }
 

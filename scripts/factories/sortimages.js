@@ -1,6 +1,7 @@
 function sortImagesDOM() {
   const $wrapper = document.createElement("div");
   $wrapper.classList.add("sort_medias");
+  $wrapper.setAttribute("tabIndex", "0");
 
   let buttonSortImages = "";
 
@@ -11,8 +12,8 @@ function sortImagesDOM() {
       <option value="date">Date</option>
       <option value="title">Titre</option>
     </select>
-    <i class="fas fa-chevron-down"></i>
-    <i class="fas fa-chevron-up hide"></i>
+    <i class="fas fa-chevron-down arrow-down"></i>
+    
     `;
 
   $wrapper.innerHTML = buttonSortImages;

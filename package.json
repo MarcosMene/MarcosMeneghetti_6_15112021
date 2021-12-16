@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/MarcosMene/MarcosMeneghetti_6_15112021/issues"
   },
-  "homepage": "https://github.com/MarcosMene/MarcosMeneghetti_6_15112021#readme"
+  "homepage": "https://github.com/MarcosMene/MarcosMeneghetti_6_15112021#readme",
+  "devDependencies": {
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0"
+  }
 }

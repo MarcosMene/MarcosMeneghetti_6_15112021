@@ -135,26 +135,19 @@ function initPhotographer() {
       ShowMediaphototgrapher.forEach((media) => {
         totallikes = totallikes + media.likes;
       });
-      // const clickLikes = document.querySelectorAll(".like_img");
 
-      // let countLikedClicked = 0;
       //display total likes footer
       displayTotalLikes(Showphotographer);
       const totalLikesText = document.querySelector(".total_likes_txt");
       totalLikesText.innerHTML = totallikes;
       AddClickHeart();
-      // // click for all hearts images
-      // for (const clickHeart of clickLikes) {
-      //   clickHeart.addEventListener("click", () => {
-      //     countLikedClicked += 1;
-      //     console.log(countLikedClicked);
-      //     let siblingClick = clickHeart.previousElementSibling;
 
-      //     siblingClick.innerHTML = parseInt(siblingClick.innerHTML) + 1;
-      //     totalLikesText.innerHTML = totallikes + countLikedClicked;
-      //   });
-      // }
       const sortByType = document.getElementById("select_images");
+
+      sortByType.addEventListener("click", () => {
+        const arrowUpDown = document.querySelector(".arrow-down");
+        arrowUpDown.classList.toggle("rotated");
+      });
 
       sortByType.addEventListener("change", (e) => {
         if (e.target.value === "popularity") {

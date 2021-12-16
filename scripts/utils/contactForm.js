@@ -1,10 +1,11 @@
 function fillForm() {
   //form elements DOM
-  const modal = document.getElementById("contact_modal");
+  // const modal = document.getElementById("contact_modal");
   const firstName = document.getElementById("first_name");
   const lastName = document.getElementById("last_name");
   const email = document.getElementById("email");
   const textMessage = document.getElementById("your_message");
+  const bodyDiv = document.querySelector("body");
   // const submitBtn = document.querySelector(".contact_form_button");
   const formPhotograph = document.querySelector("#contact_Photograph");
 
@@ -17,15 +18,44 @@ function fillForm() {
   // buton contact open form contact modal
   const ContactButton = document.querySelector(".contact_me");
   ContactButton.addEventListener("click", () => {
+    const bodyDiv = document.querySelector("body");
+    const MainDiv = document.getElementById("main");
     const modal = document.getElementById("contact_modal");
+
     modal.style.display = "block";
+    bodyDiv.classList.add("no-scroll");
+    MainDiv.setAttribute("aria-hidden", "true");
+    modal.setAttribute("aria-hidden", "false");
+
+    // select first input of form
+    document.getElementById("first_name").focus();
   });
 
   //button close form contact modal
   const closeForm = document.querySelector(".close_form");
   closeForm.addEventListener("click", () => {
+    const bodyDiv = document.querySelector("body");
+    const MainDiv = document.getElementById("main");
     const modal = document.getElementById("contact_modal");
+
+    MainDiv.setAttribute("aria-hidden", "false");
+    modal.setAttribute("aria-hidden", "true");
+
     modal.style.display = "none";
+    bodyDiv.classList.remove("no-scroll");
+  });
+
+  //close modal form using ESC and key code
+  document.addEventListener("keydown", (e) => {
+    if (e.code === "Escape") {
+      const bodyDiv = document.querySelector("body");
+      const MainDiv = document.getElementById("main");
+      const modal = document.getElementById("contact_modal");
+      modal.style.display = "none";
+      MainDiv.setAttribute("aria-hidden", "false");
+      modal.setAttribute("aria-hidden", "true");
+      bodyDiv.classList.remove("no-scroll");
+    }
   });
 
   /*

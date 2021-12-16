@@ -1,25 +1,22 @@
 function lightboxShow() {
   const modalLightBox = document.querySelector(".lightbox_modal");
   modalLightBox.style.display = "none";
+  const bodyDiv = document.querySelector("body");
+  const MainDiv = document.getElementById("main");
+  MainDiv.setAttribute("aria-hidden", "false");
+  modalLightBox.setAttribute("aria-hidden", "true");
 
   // select all videos
   const imageSelected = document.querySelectorAll(".media_link");
-
-  // click for all videos
-  // for (const imgClicked of imageSelected) {
-  //   imgClicked.addEventListener("click", (event) => {
-  //     event.preventDefault();
-  //     const modalLightBox = document.querySelector(".lightbox_modal");
-  //     modalLightBox.style.display = "flex";
-  //     currentSlide(1);
-  //   });
-  // }
 
   for (let i = 0; i < imageSelected.length; i++) {
     imageSelected[i].addEventListener("click", (event) => {
       event.preventDefault();
       const modalLightBox = document.querySelector(".lightbox_modal");
       modalLightBox.style.display = "flex";
+      MainDiv.setAttribute("aria-hidden", "true");
+      bodyDiv.classList.add("no-scroll");
+      modalLightBox.setAttribute("aria-hidden", "false");
       currentSlide(i + 1);
     });
   }
@@ -28,6 +25,27 @@ function lightboxShow() {
   closeLightBoxModal.addEventListener("click", () => {
     const modalLightBox = document.querySelector(".lightbox_modal");
     modalLightBox.style.display = "none";
+    MainDiv.setAttribute("aria-hidden", "false");
+    modalLightBox.setAttribute("aria-hidden", "true");
+    bodyDiv.classList.remove("no-scroll");
+  });
+
+  //close modal using ESC and key code
+  document.addEventListener("keydown", (e) => {
+    if (e.code === "Escape") {
+      modalLightBox.style.display = "none";
+      MainDiv.setAttribute("aria-hidden", "false");
+      modalLightBox.setAttribute("aria-hidden", "true");
+      bodyDiv.classList.remove("no-scroll");
+    }
+  });
+  // navigation with arrow keys <>
+  document.addEventListener("keydown", (e) => {
+    if (e.code === "ArrowLeft" || e.code === "Comma") {
+      plusSlides(-1);
+    } else if (e.code === "ArrowRight" || e.code === "Period") {
+      plusSlides(1);
+    }
   });
 
   //controls lightbox prev/next

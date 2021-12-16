@@ -20,16 +20,16 @@ function LightboxDOM() {
   }
 
   // add buttons lightbox
-  let buttonsLightBox = `<a href="" class="controls controls-left">
-<div role="button">
+  let buttonsLightBox = `<a href="#" class="controls controls-left">
+<div role="button" class="control_btn">
   <span class="img prev_image">
     <i aria-hidden="true" class="fas fa-chevron-left"></i>
   </span>
   <p class="sr-only">Previous</p>
 </div>
 </a>
-<a href="" class="controls controls_right">
-<div role="button">
+<a href="#" class="controls controls_right">
+<div role="button" class="control_btn">
   <span class="img next_image">
     <i aria-hidden="true" class="fas fa-chevron-right"></i>
   </span>
@@ -39,7 +39,7 @@ function LightboxDOM() {
 </a>
 
 <button class="modal_close_btn">
-&times;
+<img src="./assets/icons/close-red.svg" />
 </button>`;
 
   modalLightBox.innerHTML += buttonsLightBox;
