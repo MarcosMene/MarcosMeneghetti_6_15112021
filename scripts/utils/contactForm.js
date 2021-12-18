@@ -1,13 +1,11 @@
 function fillForm() {
   //form elements DOM
-  // const modal = document.getElementById("contact_modal");
+
   const firstName = document.getElementById("first_name");
   const lastName = document.getElementById("last_name");
   const email = document.getElementById("email");
   const textMessage = document.getElementById("your_message");
-  const bodyDiv = document.querySelector("body");
-  // const submitBtn = document.querySelector(".contact_form_button");
-  const formPhotograph = document.querySelector("#contact_Photograph");
+  const formPhotograph = document.querySelector("#contact_Photograph"); //for reset all data
 
   //error messages DOM
   const firstNameError = document.querySelector(".firstName_error");
@@ -15,20 +13,24 @@ function fillForm() {
   const emailError = document.querySelector(".email_error");
   const textMessageError = document.querySelector(".your_message_error");
 
-  // buton contact open form contact modal
+  // button contact open form contact modal
   const ContactButton = document.querySelector(".contact_me");
   ContactButton.addEventListener("click", () => {
     const bodyDiv = document.querySelector("body");
     const MainDiv = document.getElementById("main");
-    const modal = document.getElementById("contact_modal");
+    const contactModal = document.getElementById("contact_modal");
+    contactModal.focus();
+    const modal = document.querySelector(".modal");
 
-    modal.style.display = "block";
+    contactModal.style.display = "block";
     bodyDiv.classList.add("no-scroll");
     MainDiv.setAttribute("aria-hidden", "true");
-    modal.setAttribute("aria-hidden", "false");
+    MainDiv.classList.add("invisible"); //hide main div
+    contactModal.setAttribute("aria-hidden", "false");
+    document.querySelector("header a").setAttribute("tabIndex", "-1"); //disable tabindex logo
 
-    // select first input of form
-    document.getElementById("first_name").focus();
+    // focus modal
+    modal.focus();
   });
 
   //button close form contact modal
@@ -36,25 +38,28 @@ function fillForm() {
   closeForm.addEventListener("click", () => {
     const bodyDiv = document.querySelector("body");
     const MainDiv = document.getElementById("main");
-    const modal = document.getElementById("contact_modal");
+    const contactModal = document.getElementById("contact_modal");
 
     MainDiv.setAttribute("aria-hidden", "false");
-    modal.setAttribute("aria-hidden", "true");
+    MainDiv.classList.remove("invisible"); //show main div
+    contactModal.setAttribute("aria-hidden", "true");
 
-    modal.style.display = "none";
+    contactModal.style.display = "none";
     bodyDiv.classList.remove("no-scroll");
   });
 
   //close modal form using ESC and key code
   document.addEventListener("keydown", (e) => {
-    if (e.code === "Escape") {
+    const contactModal = document.getElementById("contact_modal");
+    if (e.code === "Escape" && contactModal.style.display === "block") {
       const bodyDiv = document.querySelector("body");
       const MainDiv = document.getElementById("main");
-      const modal = document.getElementById("contact_modal");
-      modal.style.display = "none";
+
+      contactModal.style.display = "none";
       MainDiv.setAttribute("aria-hidden", "false");
-      modal.setAttribute("aria-hidden", "true");
+      contactModal.setAttribute("aria-hidden", "true");
       bodyDiv.classList.remove("no-scroll");
+      document.querySelector(".contact_me").focus();
     }
   });
 

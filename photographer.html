@@ -16,8 +16,8 @@
 </head>
 
 <body>
-  <header>
-    <a href="./index.html">
+  <header role="banner">
+    <a href="./index.html" tabindex="1">
       <img src="./assets/images/logo.png" class="logo" alt="Fisheye Home page" />
     </a>
 
@@ -36,16 +36,18 @@
     </section>
 
     <!-- photograph likes and price  -->
-    <section class="likes-footer">
-    </section>
+    <footer class="likes-footer">
+    </footer>
   </main>
 
   <!-- carousel  -->
-  <section class="lightbox_modal" aria-hidden="true" role="dialog" aria-describedby="modalLightbox">
+  <section class="lightbox_modal" aria-hidden="true" role="dialog" aria-modal="true" aria-describedby="modalLightbox"
+    tabindex="1">
   </section>
 
   <!-- form -->
-  <section id="contact_modal" aria-hidden="true" role="dialog" aria-describedby="modalTitle">
+  <section id="contact_modal" aria-hidden="true" role="dialog" aria-modal="true" aria-describedby="modalForm"
+    tabindex="1">
   </section>
 
 

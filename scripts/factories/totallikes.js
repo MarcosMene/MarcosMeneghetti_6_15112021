@@ -5,7 +5,7 @@ function TotalLikesFactory(data) {
   function TotalLikesDOM() {
     const $wrapper = document.createElement("div");
     $wrapper.classList.add("likes-price");
-    $wrapper.setAttribute("tabIndex", "0");
+    $wrapper.setAttribute("tabIndex", "2");
     let cardTotalLikes = "";
 
     cardTotalLikes += `<div class="total_likes">`;

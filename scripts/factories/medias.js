@@ -8,13 +8,13 @@ function MediaPageFactory(data) {
   function MediaDOM() {
     const $wrapper = document.createElement("div");
     $wrapper.classList.add("photograph-catalog-card");
-    $wrapper.setAttribute("tabIndex", "1");
+    // $wrapper.setAttribute("tabIndex", "0");
 
     let cardmedias = "";
-    cardmedias += `<a href="#" class="media_link" data-mediaid="${id}" role="button" aria-label="${alt}">
+    cardmedias += `<a href="#" class="media_link" data-mediaid="${id}" role="button" aria-label="${alt}" tabindex="0">
 `;
     if (video !== undefined) {
-      cardmedias += `<video class="card_video medias_all" aria-label="${alt}" controls>
+      cardmedias += `<video class="card_video medias_all" aria-label="${alt}" controls >
       <source src="./assets/photographers/${photographerId}/${video}" type="video/mp4">
       </video>`;
     } else {
@@ -23,12 +23,12 @@ function MediaPageFactory(data) {
     cardmedias += `
     </a>
     <div class="photograph-catalog-info">
-       <div class="photograph-catalog-txt">
+       <div class="photograph-catalog-txt" tabindex="0">
           <h3>${title}</h3>
        </div>
         <div class="photograph-catalog-icon">
-            <h3 class="photograph-catalog-like">${likes}</h3>
-            <i class="fas fa-heart like_img" arial-label="likes"></i>
+            <h3 class="photograph-catalog-like" tabindex="0">${likes}</h3>
+            <i class="fas fa-heart like_img" arial-label="likes" tabindex="0"></i>
          </div>
        </div>
     `;

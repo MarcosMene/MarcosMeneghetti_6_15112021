@@ -6,6 +6,8 @@
     padding: 0;
 }
 
+
+
 body {
     font-family: "DM Sans", sans-serif;
 
@@ -68,7 +70,6 @@ h1 {
 }
 
 .photographer_section .photographer_card {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,7 +95,7 @@ h1 {
 }
 
 .photographer_section .photographer_card .city {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: #901C1C;
     line-height: 16.9px;
     font-weight: 700;
@@ -103,15 +104,16 @@ h1 {
 }
 
 .photographer_section .photographer_card .tagline {
-    font-size: 0.6em;
+    font-size: 0.7em;
     color: #000000;
     line-height: 16.9px;
     font-weight: 700;
 }
 
 .photographer_section .photographer_card .price {
-    font-size: 0.5em;
+    font-size: 0.75em;
     color: #757575;
     line-height: 11.7px;
+    margin-top: 5px;
 
 }

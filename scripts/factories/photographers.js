@@ -8,13 +8,13 @@ function photographerFactory(data) {
     $wrapper.classList.add(id);
 
     const photograph = `
-    <a href="./photographer.html?id=${id}">
+    <a href="./photographer.html?id=${id}" tabindex="0">
       <div class="photographer_img">
         <img src="${picture}" alt="${alt}">
         <h2>${name}</h2>
       </div>
     </a>
-    <div class="photographer_info">
+    <div class="photographer_info" tabindex="0">
       <p class="city">${city + ", " + country}</p>
       <p class="tagline">${tagline}</p>
       <p class="price">${price + "&euro;" + "/jour"}</p>

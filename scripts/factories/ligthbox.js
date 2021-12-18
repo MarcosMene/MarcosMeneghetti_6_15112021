@@ -1,14 +1,18 @@
 function LightboxDOM() {
   // create lightbox
-  const modalLightBox = document.createElement("div");
+  const modalLightBox = document.createElement("article");
   modalLightBox.classList.add("modal_carousel");
+  modalLightBox.setAttribute("tabIndex", "1");
 
   const modalMediaDiv = document.createElement("div");
   modalMediaDiv.classList.add("modal_media");
+  modalMediaDiv.setAttribute("tabIndex", "0");
 
   const mediasAll = document.querySelectorAll(".medias_all");
 
-  const mediasTitleAll = document.querySelectorAll(".photograph-catalog-txt");
+  const mediasTitleAll = document.querySelectorAll(
+    ".photograph-catalog-txt h3"
+  );
 
   // research all medias photographer
   for (var i = 0; i < mediasAll.length; i++) {
@@ -21,8 +25,8 @@ function LightboxDOM() {
 
   // add buttons lightbox
   let buttonsLightBox = `<a href="#" class="controls controls-left">
-<div role="button" class="control_btn">
-  <span class="img prev_image">
+<div role="button" class="control_btn" >
+  <span class="img prev_image" >
     <i aria-hidden="true" class="fas fa-chevron-left"></i>
   </span>
   <p class="sr-only">Previous</p>

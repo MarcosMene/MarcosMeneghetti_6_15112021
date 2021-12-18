@@ -12,6 +12,9 @@
     overflow: hidden;
 }
 
+.invisible {
+    visibility: hidden;
+}
 
 
 
@@ -343,7 +346,7 @@
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: rgba(196, 196, 196, 0.4);
+    background: rgba(250, 250, 250, 1);
     top: 0;
     left: 0;
     display: flex;
@@ -355,14 +358,14 @@
 }
 
 .lightbox_modal .modal_carousel {
-    width: 1140px;
-    height: 684px;
+    width: 65%;
+    height: 90%;
     background-color: #fff;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 80px;
+    /* padding: 40px 80px; */
 
 }
 
@@ -371,15 +374,15 @@
 .lightbox_modal .modal_media {
     height: 100%;
     width: 100%;
-    position: absolute;
-    top: 10px;
+    /* position: relative;
+    top: 10px; */
 }
 
 
 .lightbox_modal .modal_media img,
 .lightbox_modal .modal_media video {
     width: 80%;
-    height: 85%;
+    height: 87%;
     display: block;
     object-fit: contain;
 
@@ -392,7 +395,7 @@
     color: #901C1C;
     margin-top: 20px;
     /* margin-left: 130px; */
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
     text-align: center;
 }
 
@@ -412,13 +415,13 @@
 }
 
 .lightbox_modal .controls-left {
-    left: 30px;
+    left: 10px;
     border: 1px solid transparent;
 }
 
 
 .lightbox_modal .controls_right {
-    right: 30px;
+    right: 10px;
     border: 1px solid transparent;
 }
 
@@ -492,7 +495,7 @@
     height: 100%;
     width: 100%;
     overflow: auto;
-    background: rgba(196, 196, 196, 0.4);
+    background: rgba(250, 250, 250, 1);
 }
 
 .modal {
@@ -502,7 +505,7 @@
     max-width: 670px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 15px 35px;
     margin: 5% auto;
@@ -532,9 +535,10 @@
 
 
 
-.modal .modal-title {
+/* .modal .modal-title {
+    text-align: left;
     width: 100%;
-}
+} */
 
 .modal .close_form {
     cursor: pointer;
@@ -546,12 +550,13 @@
 .modal h2 {
     font-size: 3em;
     font-weight: normal;
-    text-align: left;
+    margin: 0;
+    padding: 0;
 
 }
 
 .modal h2:last-child {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
 }
 
