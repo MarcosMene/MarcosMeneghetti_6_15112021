@@ -29,7 +29,9 @@ function lightboxShow() {
     imageSelected[i].addEventListener("click", (event) => {
       event.preventDefault();
       const modalLightBox = document.querySelector(".lightbox_modal");
-      document.querySelector(".modal_carousel").focus();
+
+      const modalCarousel = document.querySelector(".modal_carousel");
+
       modalLightBox.style.display = "flex";
       document.querySelector("header a").setAttribute("tabIndex", "-1"); //disable tabindex logo
 
@@ -39,6 +41,7 @@ function lightboxShow() {
       modalLightBox.setAttribute("aria-hidden", "false");
       MainDiv.classList.add("invisible"); //hide main div
       currentSlide(i + 1);
+      modalCarousel.focus();
     });
   }
 

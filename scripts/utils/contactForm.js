@@ -19,7 +19,7 @@ function fillForm() {
     const bodyDiv = document.querySelector("body");
     const MainDiv = document.getElementById("main");
     const contactModal = document.getElementById("contact_modal");
-    contactModal.focus();
+    // contactModal.focus();
     const modal = document.querySelector(".modal");
 
     contactModal.style.display = "block";
