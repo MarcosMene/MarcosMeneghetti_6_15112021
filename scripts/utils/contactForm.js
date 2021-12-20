@@ -18,6 +18,7 @@ function fillForm() {
   ContactButton.addEventListener("click", () => {
     const bodyDiv = document.querySelector("body");
     const MainDiv = document.getElementById("main");
+
     const contactModal = document.getElementById("contact_modal");
     // contactModal.focus();
     const modal = document.querySelector(".modal");
@@ -25,9 +26,36 @@ function fillForm() {
     contactModal.style.display = "block";
     bodyDiv.classList.add("no-scroll");
     MainDiv.setAttribute("aria-hidden", "true");
-    MainDiv.classList.add("invisible"); //hide main div
+    // MainDiv.classList.add("invisible"); //hide main div
     contactModal.setAttribute("aria-hidden", "false");
+
+    // disable tabindex for other divs outside form
     document.querySelector("header a").setAttribute("tabIndex", "-1"); //disable tabindex logo
+    document.querySelector(".photograph-name").setAttribute("tabIndex", "-1"); //disable tabindex photogaph name header
+    document.querySelector(".photograph-txt").setAttribute("tabIndex", "-1"); //disable tabindex photogaph city and tagline header
+    document.querySelector(".contact_me").setAttribute("tabIndex", "-1"); //disable tabindex contact button header
+    document.querySelector(".photograph-img").setAttribute("tabIndex", "-1"); //disable tabindex image photographer header
+    document.querySelector(".likes-price").setAttribute("tabIndex", "-1"); //disable tabindex footer likes
+    document.querySelector("#sort").setAttribute("tabIndex", "-1"); //disable tabindex sort by text
+    document.querySelector("#select_images").setAttribute("tabIndex", "-1"); //disable tabindex sort button
+
+    const imageSelected = document.querySelectorAll(".media_link"); //select tabindex medias catalog
+    const imageTxt = document.querySelectorAll(".photograph-catalog-txt"); //select tabindex medias catalog title
+    const imageLike = document.querySelectorAll(".photograph-catalog-like"); //select tabindex medias catalog like number
+    const imageLikeHeart = document.querySelectorAll(".like_img"); //select tabindex medias catalog like heart icon
+
+    for (let i = 0; i < imageSelected.length; i++) {
+      imageSelected[i].setAttribute("tabIndex", "-1"); //disable tabindex medias catalog
+      imageTxt[i].setAttribute("tabIndex", "-1"); //disable tabindex medias catalog title
+      imageLike[i].setAttribute("tabIndex", "-1"); //disable tabindex medias catalog like number
+      imageLikeHeart[i].setAttribute("tabIndex", "-1"); //disable tabindex medias catalog like heart icon
+    }
+
+    //disable tabindex video catalog
+    const videoCatalog = document.querySelectorAll(".card_video");
+    for (let i = 0; i < videoCatalog.length; i++) {
+      videoCatalog[i].setAttribute("tabIndex", "-1");
+    }
 
     // focus modal
     modal.focus();
@@ -41,11 +69,15 @@ function fillForm() {
     const contactModal = document.getElementById("contact_modal");
 
     MainDiv.setAttribute("aria-hidden", "false");
-    MainDiv.classList.remove("invisible"); //show main div
+    // MainDiv.classList.remove("invisible"); //show main div
     contactModal.setAttribute("aria-hidden", "true");
 
     contactModal.style.display = "none";
     bodyDiv.classList.remove("no-scroll");
+
+    // document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
+    enableTabindexForm();
+    document.querySelector(".photograph-name").focus();
   });
 
   //close modal form using ESC and key code
@@ -59,16 +91,51 @@ function fillForm() {
       MainDiv.setAttribute("aria-hidden", "false");
       contactModal.setAttribute("aria-hidden", "true");
       bodyDiv.classList.remove("no-scroll");
-      document.querySelector(".contact_me").focus();
+      document.querySelector(".photograph-name").focus();
+
+      // document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
+
+      enableTabindexForm();
     }
   });
 
+  function enableTabindexForm() {
+    // enable tabindex for other divs outside form
+    document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
+    document.querySelector(".photograph-name").setAttribute("tabIndex", "2"); //enable tabindex photogaph name header
+    document.querySelector(".photograph-txt").setAttribute("tabIndex", "2"); //enable tabindex photogaph city and tagline header
+    document.querySelector(".contact_me").setAttribute("tabIndex", "2"); //enable tabindex contact button header
+    document.querySelector(".photograph-img").setAttribute("tabIndex", "2"); //enable tabindex image photographer header
+    document.querySelector(".likes-price").setAttribute("tabIndex", "2"); //enable tabindex footer likes
+    document.querySelector("#sort").setAttribute("tabIndex", "0"); //enable tabindex sort by text
+    document.querySelector("#select_images").setAttribute("tabIndex", "0"); //enable tabindex sort button
+
+    const imageSelected = document.querySelectorAll(".media_link"); //select tabindex medias catalog
+    const imageTxt = document.querySelectorAll(".photograph-catalog-txt"); //select tabindex medias catalog title
+    const imageLike = document.querySelectorAll(".photograph-catalog-like"); //select tabindex medias catalog like number
+    const imageLikeHeart = document.querySelectorAll(".like_img"); //select tabindex medias catalog like heart icon
+
+    for (let i = 0; i < imageSelected.length; i++) {
+      imageSelected[i].setAttribute("tabIndex", "0"); //enable tabindex medias catalog
+      imageTxt[i].setAttribute("tabIndex", "0"); //enable tabindex medias catalog title
+      imageLike[i].setAttribute("tabIndex", "0"); //enable tabindex medias catalog like number
+      imageLikeHeart[i].setAttribute("tabIndex", "0"); //enable tabindex medias catalog like heart icon
+    }
+
+    //enable tabindex video catalog
+    const videoCatalog = document.querySelectorAll(".card_video");
+    for (let i = 0; i < videoCatalog.length; i++) {
+      videoCatalog[i].removeAttribute("tabIndex", "-1");
+    }
+  }
+
+  // check for all inputs form
   /*
-  first name
+  first name form
   */
 
   //hide messages first name
-  firstName.addEventListener("focus", (e) => {
+  firstName.addEventListener("focus", () => {
     firstNameError.style.display = "none";
   });
 
@@ -87,11 +154,11 @@ function fillForm() {
   });
 
   /*
-  last name
+  last name form
   */
 
   //hide message error last name
-  lastName.addEventListener("focus", (e) => {
+  lastName.addEventListener("focus", () => {
     lastNameError.style.display = "none";
   });
 
@@ -111,11 +178,11 @@ function fillForm() {
   });
 
   /*
-  email
+  email form
   */
 
   //hide message error email
-  email.addEventListener("focus", (e) => {
+  email.addEventListener("focus", () => {
     emailError.style.display = "none";
   });
 
@@ -134,11 +201,11 @@ function fillForm() {
   });
 
   /*
-  text message
+  text message form
   */
 
   //hide error message
-  textMessage.addEventListener("focus", (e) => {
+  textMessage.addEventListener("focus", () => {
     textMessageError.style.display = "none";
   });
 
@@ -279,6 +346,7 @@ function fillForm() {
 
       //the page will be not refresh when submit button will be clicked
       formPhotograph.reset();
+      document.querySelector(".contact_form_button").blur(); //disable focus button submit form
     }
   });
 }
