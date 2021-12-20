@@ -195,7 +195,7 @@ function fillForm() {
       submitBtn.setAttribute("disabled", true);
     } else if (firstName.value.length < 2) {
       firstNameError.innerHTML =
-        "Veuillez entrer 2 caractères ou plus pour le champ du nom.";
+        "Veuillez entrer 2 caractères ou plus pour le champ du prénom.";
       firstNameError.style.display = "inline";
       firstName.style.border = "4px solid red";
       submitBtn.setAttribute("disabled", true);
