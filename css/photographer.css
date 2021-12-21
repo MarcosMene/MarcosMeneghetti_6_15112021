@@ -126,6 +126,7 @@
 **
 */
 
+
 .select-dropdown {
     display: inline-flex;
     position: relative;
@@ -137,6 +138,8 @@
 .select-dropdown .sort_medias {
     display: block;
 }
+
+
 
 .select-dropdown label {
     margin: 0;
@@ -167,6 +170,17 @@
     -moz-appearance: none;
 }
 
+.select-dropdown select:hover,
+.select-dropdown select:focus {
+    color: #000;
+    background-color: #db8876;
+}
+
+.select-dropdown select:blur {
+    color: #fff;
+    background-color: #901C1C;
+}
+
 
 
 .select-dropdown option {
@@ -176,13 +190,9 @@
     top: 0;
     left: 50px;
     outline: none;
+    color: #fff;
 }
 
-.select-dropdown option:hover {
-
-    background-color: #901C1C;
-    color: green;
-}
 
 
 
