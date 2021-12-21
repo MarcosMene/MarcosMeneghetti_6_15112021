@@ -144,6 +144,12 @@ function initPhotographer() {
 
       const sortByType = document.getElementById("select_images");
 
+      // if (sortByType.hasFocus()) {
+      //   sortByType.size = 3;
+      // } else if (sortByType.blur()) {
+      //   sortByType.size = 1;
+      // }
+
       sortByType.addEventListener("click", () => {
         const arrowUpDown = document.querySelector(".arrow-down");
         arrowUpDown.classList.toggle("rotated");

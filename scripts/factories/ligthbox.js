@@ -2,11 +2,11 @@ function LightboxDOM() {
   // create lightbox
   const modalLightBox = document.createElement("article");
   modalLightBox.classList.add("modal_carousel");
-  modalLightBox.setAttribute("tabIndex", "1");
+  // modalLightBox.setAttribute("tabIndex", "1");
 
   const modalMediaDiv = document.createElement("div");
   modalMediaDiv.classList.add("modal_media");
-  modalMediaDiv.setAttribute("tabIndex", "0");
+  // modalMediaDiv.setAttribute("tabIndex", "0");
 
   const mediasAll = document.querySelectorAll(".medias_all");
 
@@ -29,7 +29,7 @@ function LightboxDOM() {
   <span class="img prev_image" >
     <i aria-hidden="true" class="fas fa-chevron-left"></i>
   </span>
-  <p class="sr-only">Previous</p>
+  <p class="sr-only">Previous image</p>
 </div>
 </a>
 <a href="#" class="controls controls_right">
@@ -37,12 +37,12 @@ function LightboxDOM() {
   <span class="img next_image">
     <i aria-hidden="true" class="fas fa-chevron-right"></i>
   </span>
-  <p class="sr-only">Next</p>
+  <p class="sr-only">Next image</p>
 </div>
 
 </a>
 
-<button class="modal_close_btn">
+<button class="modal_close_btn" aria-label="close dialog">
 <img src="./assets/icons/close-red.svg" />
 </button>`;
 

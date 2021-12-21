@@ -4,7 +4,7 @@ function contactFormFactory(data) {
   function contactFormDOM() {
     const $wrapper = document.createElement("div");
     $wrapper.classList.add("modal");
-    $wrapper.setAttribute("tabIndex", "1");
+    $wrapper.setAttribute("aria-label", "image closeup view");
 
     let cardForm = "";
 

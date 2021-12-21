@@ -7,7 +7,7 @@ function lightboxShow() {
   modalLightBox.setAttribute("aria-hidden", "true");
 
   // add tabindex to medias and text lightbox
-  // const modalMediaTab = document.querySelectorAll(".modal_media");
+
   const mediasAllTab = document.querySelectorAll(".modal_media .medias_all");
   const txtLightBoxTab = document.querySelectorAll(".modal_media h3");
 
@@ -24,16 +24,17 @@ function lightboxShow() {
   // select all videos
   const imageSelected = document.querySelectorAll(".media_link");
 
-  // open all medias
+  // open all medias click mouse
   for (let i = 0; i < imageSelected.length; i++) {
+    //click mouse
     imageSelected[i].addEventListener("click", (event) => {
       event.preventDefault();
       const modalLightBox = document.querySelector(".lightbox_modal");
 
-      const modalCarousel = document.querySelector(".modal_carousel");
+      // const modalCarousel = document.querySelector(".modal_carousel");
 
       modalLightBox.style.display = "flex";
-      document.querySelector("header a").setAttribute("tabIndex", "-1"); //disable tabindex logo
+      // document.querySelector("header a").setAttribute("tabIndex", "-1"); //disable tabindex logo
 
       MainDiv.setAttribute("aria-hidden", "true");
 
@@ -54,7 +55,7 @@ function lightboxShow() {
 
       const imageSelected = document.querySelectorAll(".media_link"); //select tabindex medias catalog
       const imageTxt = document.querySelectorAll(".photograph-catalog-txt"); //select tabindex medias catalog title
-      const imageLike = document.querySelectorAll(".photograph-catalog-like"); //select tabindex medias catalog like number
+      const imageLike = document.querySelectorAll(".photograph-catalog-icon"); //select tabindex medias catalog like number
       const imageLikeHeart = document.querySelectorAll(".like_img"); //select tabindex medias catalog like heart icon
 
       for (let i = 0; i < imageSelected.length; i++) {
@@ -70,7 +71,13 @@ function lightboxShow() {
         videoCatalog[i].setAttribute("tabIndex", "-1");
       }
 
-      modalCarousel.focus();
+      //focus to image selected inside to lightbox
+      const modalMediaTab = document.querySelectorAll(".modal_media");
+      for (let i = 0; i < modalMediaTab.length; i++) {
+        if (modalMediaTab[i].style.display === "block") {
+          modalMediaTab[i].firstChild.focus();
+        }
+      }
     });
   }
 
@@ -173,7 +180,7 @@ function lightboxShow() {
 
     const imageSelected = document.querySelectorAll(".media_link"); //select tabindex medias catalog
     const imageTxt = document.querySelectorAll(".photograph-catalog-txt"); //select tabindex medias catalog title
-    const imageLike = document.querySelectorAll(".photograph-catalog-like"); //select tabindex medias catalog like number
+    const imageLike = document.querySelectorAll(".photograph-catalog-icon"); //select tabindex medias catalog like number
     const imageLikeHeart = document.querySelectorAll(".like_img"); //select tabindex medias catalog like heart icon
 
     for (let i = 0; i < imageSelected.length; i++) {

@@ -10,7 +10,7 @@ function photographerFactory(data) {
     const photograph = `
     <a href="./photographer.html?id=${id}" tabindex="0">
       <div class="photographer_img">
-        <img src="${picture}" alt="${alt}">
+        <img src="${picture}" alt="">
         <h2>${name}</h2>
       </div>
     </a>

@@ -15,13 +15,12 @@ function fillForm() {
 
   // button contact open form contact modal
   const ContactButton = document.querySelector(".contact_me");
+
   ContactButton.addEventListener("click", () => {
     const bodyDiv = document.querySelector("body");
     const MainDiv = document.getElementById("main");
-
     const contactModal = document.getElementById("contact_modal");
-    // contactModal.focus();
-    const modal = document.querySelector(".modal");
+    const modalTitle = document.querySelector(".modal-title");
 
     contactModal.style.display = "block";
     bodyDiv.classList.add("no-scroll");
@@ -41,7 +40,7 @@ function fillForm() {
 
     const imageSelected = document.querySelectorAll(".media_link"); //select tabindex medias catalog
     const imageTxt = document.querySelectorAll(".photograph-catalog-txt"); //select tabindex medias catalog title
-    const imageLike = document.querySelectorAll(".photograph-catalog-like"); //select tabindex medias catalog like number
+    const imageLike = document.querySelectorAll(".photograph-catalog-icon"); //select tabindex medias catalog like number
     const imageLikeHeart = document.querySelectorAll(".like_img"); //select tabindex medias catalog like heart icon
 
     for (let i = 0; i < imageSelected.length; i++) {
@@ -58,11 +57,12 @@ function fillForm() {
     }
 
     // focus modal
-    modal.focus();
+    modalTitle.focus();
   });
 
   //button close form contact modal
   const closeForm = document.querySelector(".close_form");
+
   closeForm.addEventListener("click", () => {
     const bodyDiv = document.querySelector("body");
     const MainDiv = document.getElementById("main");
@@ -77,7 +77,9 @@ function fillForm() {
 
     // document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
     enableTabindexForm();
-    document.querySelector(".photograph-name").focus();
+
+    const ContactButton = document.querySelector(".contact_me");
+    ContactButton.focus();
   });
 
   //close modal form using ESC and key code
@@ -91,11 +93,13 @@ function fillForm() {
       MainDiv.setAttribute("aria-hidden", "false");
       contactModal.setAttribute("aria-hidden", "true");
       bodyDiv.classList.remove("no-scroll");
-      document.querySelector(".photograph-name").focus();
 
       // document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
 
       enableTabindexForm();
+
+      const ContactButton = document.querySelector(".contact_me");
+      ContactButton.focus();
     }
   });
 
@@ -112,7 +116,7 @@ function fillForm() {
 
     const imageSelected = document.querySelectorAll(".media_link"); //select tabindex medias catalog
     const imageTxt = document.querySelectorAll(".photograph-catalog-txt"); //select tabindex medias catalog title
-    const imageLike = document.querySelectorAll(".photograph-catalog-like"); //select tabindex medias catalog like number
+    const imageLike = document.querySelectorAll(".photograph-catalog-icon"); //select tabindex medias catalog like number
     const imageLikeHeart = document.querySelectorAll(".like_img"); //select tabindex medias catalog like heart icon
 
     for (let i = 0; i < imageSelected.length; i++) {

@@ -26,9 +26,9 @@ function MediaPageFactory(data) {
        <div class="photograph-catalog-txt" tabindex="0">
           <h3>${title}</h3>
        </div>
-        <div class="photograph-catalog-icon">
-            <h3 class="photograph-catalog-like" tabindex="0">${likes}</h3>
-            <i class="fas fa-heart like_img" arial-label="likes" tabindex="0"></i>
+        <div class="photograph-catalog-icon" tabindex="0" >
+            <h3 class="photograph-catalog-like" >${likes}</h3>
+            <i class="fas fa-heart like_img" tabindex="0" aria-label="likes" role="button"></i>
          </div>
        </div>
     `;

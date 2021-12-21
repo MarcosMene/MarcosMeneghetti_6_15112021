@@ -10,9 +10,9 @@ function TotalLikesFactory(data) {
 
     cardTotalLikes += `<div class="total_likes">`;
 
-    cardTotalLikes += `<h3 class="total_likes_txt">${likes}</h3>`;
+    cardTotalLikes += `<h3 class="total_likes_txt" >${likes}</h3>`;
 
-    cardTotalLikes += `<i class="fas fa-heart"></i>`;
+    cardTotalLikes += `<i class="fas fa-heart" aria-label="likes"></i>`;
 
     cardTotalLikes += ` </div>
     <div class="price">

@@ -16,7 +16,9 @@
     visibility: hidden;
 }
 
-
+/* *:focus {
+    outline: 2px solid #525252;
+} */
 
 .photograph-header {
     background-color: #FAFAFA;
