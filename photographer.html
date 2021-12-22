@@ -23,31 +23,30 @@
 
   </header>
   <main id="main" class="main">
-    <section class="photograph_header_section">
+    <section class="photograph_header_section" role="region" aria-label="photographer info">
 
     </section>
 
     <!-- button sort popularity/date/title  -->
-    <div class="select-dropdown" role="region">
+    <div class="select-dropdown" role="listbox">
     </div>
 
     <!-- photograph catalog images  -->
-    <section class="photograph-catalog-cards">
+    <section class="photograph-catalog-cards" role="region" aria-label="catalog medias">
     </section>
 
     <!-- photograph likes and price  -->
-    <footer class="likes-footer">
+    <footer class="likes-footer" role="contentinfo">
     </footer>
   </main>
 
   <!-- carousel  -->
-  <section class="lightbox_modal" aria-hidden="true" role="dialog" aria-modal="true" aria-describedby="modalLightbox">
+  <section class="lightbox_modal" aria-hidden="true" role="dialog" aria-modal="true">
   </section>
 
   <!-- form -->
-  <section id="contact_modal" aria-hidden="true" role="dialog" aria-modal="true" aria-describedby="modalForm">
+  <section id="contact_modal" aria-hidden="true" role="dialog" aria-modal="true">
   </section>
-
 
   <!-- factories  -->
   <script src="./scripts/factories/photographerPage.js" defer></script>
@@ -57,22 +56,16 @@
   <script src="./scripts/factories/ligthbox.js" defer></script>
   <script src="./scripts/factories/contactform.js" defer></script>
 
-
   <!-- pages  -->
   <script src="./scripts/pages/photographer.js" defer></script>
 
   <!-- App -->
-  <script type="module" src="./scripts/App.js" defer></script>
+  <script type="module" src="./scripts/App.js"></script>
 
   <!-- tools  -->
   <script src="./scripts/utils/likesclicked.js" defer></script>
   <script src="./scripts/utils/contactForm.js" defer></script>
   <script src="./scripts/utils/lightbox.js" defer></script>
-
-
-
-
-
 
 </body>
 
