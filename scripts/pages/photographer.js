@@ -127,7 +127,7 @@ function initPhotographer() {
       displayMediaData(ShowMediaphototgrapher, "popularity");
 
       // variable accumule likes photographer
-      let totallikes;
+      let totallikes = null;
 
       // calcule total de likes par photographe
       ShowMediaphototgrapher.forEach((media) => {
