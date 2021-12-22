@@ -144,21 +144,6 @@ function lightboxShow() {
     enableTabindexLightbox();
   });
 
-  //close modal using ESC and key code
-  document.addEventListener("keydown", (e) => {
-    if (e.code === "Escape") {
-      modalLightBox.style.display = "none";
-      MainDiv.setAttribute("aria-hidden", "false");
-      modalLightBox.setAttribute("aria-hidden", "true");
-      bodyDiv.classList.remove("no-scroll");
-
-      const lastMediaModal = document.querySelectorAll(".media_link"); //select last media modal
-      lastMediaModal[getIndexMediaModal - 1].focus();
-
-      enableTabindexLightbox();
-    }
-  });
-
   function enableTabindexLightbox() {
     // enable tabindex for other divs outside form
     document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo

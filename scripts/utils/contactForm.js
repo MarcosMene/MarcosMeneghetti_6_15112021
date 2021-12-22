@@ -78,25 +78,6 @@ function fillForm() {
     ContactButton.focus();
   });
 
-  //close modal form using ESC and key code
-  document.addEventListener("keydown", (e) => {
-    const contactModal = document.getElementById("contact_modal");
-    if (e.code === "Escape" && contactModal.style.display === "block") {
-      const bodyDiv = document.querySelector("body");
-      const MainDiv = document.getElementById("main");
-
-      contactModal.style.display = "none";
-      MainDiv.setAttribute("aria-hidden", "false");
-      contactModal.setAttribute("aria-hidden", "true");
-      bodyDiv.classList.remove("no-scroll");
-
-      enableTabindexForm();
-
-      const ContactButton = document.querySelector(".contact_me");
-      ContactButton.focus();
-    }
-  });
-
   function enableTabindexForm() {
     // enable tabindex for other divs outside form
     document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
