@@ -15,7 +15,7 @@ function contactFormFactory(data) {
 </div>
       
 
-        <form id="contact_Photograph" role="form" action="photographer.html" method="post">
+        <form id="contact_Photograph" role="form" action="" method="">
        
         <div role="group" aria-labelledby="coordonnees">
 

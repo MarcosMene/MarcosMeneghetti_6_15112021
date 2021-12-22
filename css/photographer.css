@@ -16,9 +16,6 @@
     visibility: hidden;
 }
 
-/* *:focus {
-    outline: 2px solid #525252;
-} */
 
 .photograph-header {
     background-color: #FAFAFA;
@@ -52,7 +49,6 @@
 
 
 
-
 /* photographers page */
 
 .photograph_header {
@@ -72,8 +68,6 @@
     margin-left: 50px;
 }
 
-
-
 .photograph_header h1 {
     color: #D3573C;
     font-size: 4rem;
@@ -86,27 +80,19 @@
     color: #901C1C;
     font-size: 1.5rem;
     line-height: 31px;
-    /* margin: 0; */
     font-weight: 400;
-
 }
 
 .photograph_header p {
     color: #525252;
     font-size: 1.125rem;
-
     line-height: 23px;
 }
-
-
-
 
 .photograph_header button {
     margin-left: 5%;
     margin-right: auto;
 }
-
-
 
 .photograph_header .photograph-img {
     display: flex;
@@ -127,30 +113,23 @@
 /* select dropdown 
 **
 */
-
-
 .select-dropdown {
     display: inline-flex;
     position: relative;
     margin-top: 10px;
     font-size: 1.125em;
-
 }
 
 .select-dropdown .sort_medias {
     display: block;
 }
 
-
-
 .select-dropdown label {
     margin: 0;
     padding: 0;
     margin-right: 20px;
-    /* font-size: 1.125em; */
     font-weight: 700;
 }
-
 
 .select-dropdown select {
     width: 170px;
@@ -163,13 +142,11 @@
     border-radius: 5px;
     cursor: pointer;
     text-indent: 1px;
-    /* text-overflow: ''; */
     outline: none;
 
     /* hide arrow selector  */
     appearance: none;
-    /* -webkit-appearance: none;
-    -moz-appearance: none; */
+
 }
 
 .select-dropdown select:hover,
@@ -183,8 +160,6 @@
     background-color: #901C1C;
 }
 
-
-
 .select-dropdown option {
     line-height: 30px;
     background-color: #901C1C;
@@ -194,9 +169,6 @@
     outline: none;
     color: #fff;
 }
-
-
-
 
 .select-dropdown i {
     position: absolute;
@@ -211,35 +183,9 @@
 /* rotation button sort popularity/date/title  */
 .rotated {
     transform: rotate(180deg);
-    /* -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg); */
 }
 
 
-/* .select-dropdown i {
-    margin-left: 30px;
-} */
-
-
-
-/* arrow up select-dropdown */
-/* .select-dropdown i:not(:first-child) {
-    display: none;
-} */
-
-
-
-/* .select-dropdown li:not(:first-child):before {
-    content: "";
-    width: 150px;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
-    top: 0;
-
-
-} */
 
 /* photographers catalog image *
 ***
@@ -260,8 +206,6 @@
     padding-bottom: 100px;
 }
 
-
-
 .photograph-catalog-card .card_image,
 .photograph-catalog-card .card_video {
     display: block;
@@ -278,12 +222,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-
-
 }
 
 .photograph-catalog-info h3 {
-
     font-size: 1.28em;
     line-height: 31px;
     color: #901C1C;
@@ -299,8 +240,6 @@
 .photograph-catalog-icon .like_img {
     font-size: 1.2em;
     color: transparent;
-    /* -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #911C1C; */
     color: #911C1C;
 
     transition: color 400ms;
@@ -309,12 +248,6 @@
     margin-left: 10px;
     cursor: pointer;
 }
-
-/* .photograph-catalog-icon .like_img:hover {
-    color: #911C1C;
-    -webkit-text-stroke-color: #911C1C;
-} */
-
 
 
 /* 
@@ -347,9 +280,6 @@
 }
 
 
-
-
-
 /*  
 *****light box modal
 */
@@ -366,7 +296,6 @@
     justify-content: center;
     display: none;
     z-index: 2000;
-
 }
 
 .lightbox_modal .modal_carousel {
@@ -377,8 +306,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 40px 80px; */
-
 }
 
 
@@ -386,8 +313,6 @@
 .lightbox_modal .modal_media {
     height: 100%;
     width: 100%;
-    /* position: relative;
-    top: 10px; */
 }
 
 
@@ -397,8 +322,6 @@
     height: 87%;
     display: block;
     object-fit: contain;
-
-    /* pointer-events: none; */
     margin: 30px auto 10px;
 }
 
@@ -406,8 +329,6 @@
     font-size: 1.2em;
     color: #901C1C;
     margin-top: 20px;
-    /* margin-left: 130px; */
-    /* margin-bottom: 100px; */
     text-align: center;
 }
 
@@ -419,7 +340,6 @@
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-
 }
 
 .lightbox_modal .control_btn {
@@ -431,13 +351,10 @@
     border: 1px solid transparent;
 }
 
-
 .lightbox_modal .controls_right {
     right: 10px;
     border: 1px solid transparent;
 }
-
-
 
 .lightbox_modal .controls_right:hover,
 .lightbox_modal .controls-left:hover,
@@ -445,20 +362,15 @@
 .lightbox_modal .controls-left:focus {
     outline: none;
     border: 1px solid #901C1C;
-
-}
-
-
-.lightbox_modal i {
-    padding: 0 20px;
-
 }
 
 .lightbox_modal i {
     padding: 0 20px;
 }
 
-
+.lightbox_modal i {
+    padding: 0 20px;
+}
 
 .lightbox_modal .modal_close_btn {
     position: absolute;
@@ -489,9 +401,6 @@
     color: #901C1C;
     width: 70%;
     height: 70%;
-
-
-
 }
 
 /* 
@@ -522,7 +431,6 @@
     padding: 15px 35px;
     margin: 5% auto;
     position: relative;
-    /* height: 950px; */
 }
 
 
@@ -546,12 +454,6 @@
 }
 
 
-
-/* .modal .modal-title {
-    text-align: left;
-    width: 100%;
-} */
-
 .modal .close_form {
     cursor: pointer;
     position: absolute;
@@ -567,25 +469,6 @@
     align-items: center;
 }
 
-/* position: absolute;
-top: 30px;
-right: 15px;
-font-size: 20px;
-z-index: 400;
-width: 45px;
-height: 45px;
-border-radius: 100%;
-padding: 2px;
-background-color: transparent;
-border: none;
-cursor: pointer;
-display: flex;
-justify-content: center;
-align-items: center; */
-
-
-
-
 .modal .close_form img {
     width: 70%;
     height: 70%;
@@ -593,11 +476,7 @@ align-items: center; */
 
 .modal .close_form:hover,
 .modal .close_form:focus {
-    /* color: #525252; */
     background-color: #911C1C;
-    ;
-
-
 }
 
 .modal h2 {
@@ -605,14 +484,11 @@ align-items: center; */
     font-weight: normal;
     margin: 0;
     padding: 0;
-
 }
 
 .modal h2:last-child {
     margin-bottom: 10px;
-
 }
-
 
 .modal form {
     margin-top: 20px;
@@ -639,7 +515,6 @@ align-items: center; */
 
 .modal form input {
     height: 68px;
-
 }
 
 .modal textarea {
@@ -654,8 +529,6 @@ align-items: center; */
     align-items: self-start;
     margin-bottom: 26px;
 }
-
-
 
 .modal .contact_button {
     font-size: 20px;
