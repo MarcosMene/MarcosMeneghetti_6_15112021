@@ -178,7 +178,7 @@
     background-color: #db8876;
 }
 
-.select-dropdown select:blur {
+.select-dropdown select:not(:focus) {
     color: #fff;
     background-color: #901C1C;
 }
