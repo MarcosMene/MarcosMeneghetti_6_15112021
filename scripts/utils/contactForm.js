@@ -1,6 +1,5 @@
 function fillForm() {
   //form elements DOM
-
   const firstName = document.getElementById("first_name");
   const lastName = document.getElementById("last_name");
   const email = document.getElementById("email");
@@ -25,7 +24,6 @@ function fillForm() {
     contactModal.style.display = "block";
     bodyDiv.classList.add("no-scroll");
     MainDiv.setAttribute("aria-hidden", "true");
-    // MainDiv.classList.add("invisible"); //hide main div
     contactModal.setAttribute("aria-hidden", "false");
 
     // disable tabindex for other divs outside form
@@ -69,13 +67,11 @@ function fillForm() {
     const contactModal = document.getElementById("contact_modal");
 
     MainDiv.setAttribute("aria-hidden", "false");
-    // MainDiv.classList.remove("invisible"); //show main div
     contactModal.setAttribute("aria-hidden", "true");
 
     contactModal.style.display = "none";
     bodyDiv.classList.remove("no-scroll");
 
-    // document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
     enableTabindexForm();
 
     const ContactButton = document.querySelector(".contact_me");
@@ -93,8 +89,6 @@ function fillForm() {
       MainDiv.setAttribute("aria-hidden", "false");
       contactModal.setAttribute("aria-hidden", "true");
       bodyDiv.classList.remove("no-scroll");
-
-      // document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
 
       enableTabindexForm();
 
@@ -134,9 +128,8 @@ function fillForm() {
   }
 
   // check for all inputs form
-  /*
-  first name form
-  */
+
+  /*first name form*/
 
   //hide messages first name
   firstName.addEventListener("focus", () => {
@@ -157,9 +150,7 @@ function fillForm() {
     }
   });
 
-  /*
-  last name form
-  */
+  /*last name form*/
 
   //hide message error last name
   lastName.addEventListener("focus", () => {
@@ -181,9 +172,7 @@ function fillForm() {
     }
   });
 
-  /*
-  email form
-  */
+  /*email form*/
 
   //hide message error email
   email.addEventListener("focus", () => {
@@ -204,9 +193,7 @@ function fillForm() {
     }
   });
 
-  /*
-  text message form
-  */
+  /*text message form*/
 
   //hide error message
   textMessage.addEventListener("focus", () => {
@@ -231,8 +218,6 @@ function fillForm() {
   // submit button clicked
   const submitBtn = document.querySelector(".contact_form_button");
   submitBtn.addEventListener("click", (e) => {
-    // var format_txt = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
-
     // submit event first name
     if (
       firstName.value === "" &&

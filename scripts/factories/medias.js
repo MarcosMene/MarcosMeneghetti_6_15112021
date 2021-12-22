@@ -8,7 +8,6 @@ function MediaPageFactory(data) {
   function MediaDOM() {
     const $wrapper = document.createElement("div");
     $wrapper.classList.add("photograph-catalog-card");
-    // $wrapper.setAttribute("tabIndex", "0");
 
     let cardmedias = "";
     cardmedias += `<a href="#" class="media_link" data-mediaid="${id}" role="button" aria-label="${alt}" tabindex="0">

@@ -1,7 +1,6 @@
 function sortImagesDOM() {
   const $wrapper = document.createElement("div");
   $wrapper.classList.add("sort_medias");
-  // $wrapper.setAttribute("tabIndex", "7");
 
   let buttonSortImages = "";
 

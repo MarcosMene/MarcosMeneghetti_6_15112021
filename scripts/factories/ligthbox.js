@@ -2,11 +2,9 @@ function LightboxDOM() {
   // create lightbox
   const modalLightBox = document.createElement("article");
   modalLightBox.classList.add("modal_carousel");
-  // modalLightBox.setAttribute("tabIndex", "1");
 
   const modalMediaDiv = document.createElement("div");
   modalMediaDiv.classList.add("modal_media");
-  // modalMediaDiv.setAttribute("tabIndex", "0");
 
   const mediasAll = document.querySelectorAll(".medias_all");
 

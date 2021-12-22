@@ -11,12 +11,12 @@ function lightboxShow() {
   const mediasAllTab = document.querySelectorAll(".modal_media .medias_all");
   const txtLightBoxTab = document.querySelectorAll(".modal_media h3");
 
-  // for (let i = 0; i < modalMediaTab.length; i++) {
-  //   modalMediaTab[i].setAttribute("tabIndex", "0");
-  // }
+  //tabindex for medias
   for (let i = 0; i < mediasAllTab.length; i++) {
     mediasAllTab[i].setAttribute("tabIndex", "0");
   }
+
+  //tabindex for medias text
   for (let i = 0; i < txtLightBoxTab.length; i++) {
     txtLightBoxTab[i].setAttribute("tabIndex", "0");
   }
@@ -29,18 +29,14 @@ function lightboxShow() {
     //click mouse
     imageSelected[i].addEventListener("click", (event) => {
       event.preventDefault();
+
       const modalLightBox = document.querySelector(".lightbox_modal");
 
-      // const modalCarousel = document.querySelector(".modal_carousel");
-
       modalLightBox.style.display = "flex";
-      // document.querySelector("header a").setAttribute("tabIndex", "-1"); //disable tabindex logo
-
       MainDiv.setAttribute("aria-hidden", "true");
-
       bodyDiv.classList.add("no-scroll");
       modalLightBox.setAttribute("aria-hidden", "false");
-      // MainDiv.classList.add("invisible"); //hide main div
+
       currentSlide(i + 1);
 
       // disable tabindex for other divs outside form
@@ -142,8 +138,6 @@ function lightboxShow() {
     MainDiv.setAttribute("aria-hidden", "false");
     modalLightBox.setAttribute("aria-hidden", "true");
     bodyDiv.classList.remove("no-scroll");
-    // MainDiv.classList.remove("invisible"); //show main div
-    // document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
 
     const lastMediaModal = document.querySelectorAll(".media_link"); //select last media modal
     lastMediaModal[getIndexMediaModal - 1].focus();
@@ -157,8 +151,6 @@ function lightboxShow() {
       MainDiv.setAttribute("aria-hidden", "false");
       modalLightBox.setAttribute("aria-hidden", "true");
       bodyDiv.classList.remove("no-scroll");
-      // MainDiv.classList.remove("invisible"); //show main div
-      // document.querySelector("header a").setAttribute("tabIndex", "1"); //enable tabindex logo
 
       const lastMediaModal = document.querySelectorAll(".media_link"); //select last media modal
       lastMediaModal[getIndexMediaModal - 1].focus();

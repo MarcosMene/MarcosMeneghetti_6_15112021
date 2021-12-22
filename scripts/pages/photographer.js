@@ -123,9 +123,7 @@ function initPhotographer() {
       );
 
       // display sort images for photographer
-
       // get info sort by button
-
       displayMediaData(ShowMediaphototgrapher, "popularity");
 
       // variable accumule likes photographer
@@ -143,12 +141,6 @@ function initPhotographer() {
       AddClickHeart();
 
       const sortByType = document.getElementById("select_images");
-
-      // if (sortByType.hasFocus()) {
-      //   sortByType.size = 3;
-      // } else if (sortByType.blur()) {
-      //   sortByType.size = 1;
-      // }
 
       sortByType.addEventListener("click", () => {
         const arrowUpDown = document.querySelector(".arrow-down");

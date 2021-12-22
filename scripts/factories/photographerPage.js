@@ -7,7 +7,6 @@ function photographerPageFactory(dataPage) {
     const $wrapperHeader = document.createElement("div");
     $wrapperHeader.classList.add("photograph_header");
     $wrapperHeader.classList.add(id);
-    // $wrapperHeader.setAttribute("tabIndex", "1");
 
     const photographerCard = `
     <div class="photograph-info">
