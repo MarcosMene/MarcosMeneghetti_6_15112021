@@ -168,8 +168,8 @@
 
     /* hide arrow selector  */
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    /* -webkit-appearance: none;
+    -moz-appearance: none; */
 }
 
 .select-dropdown select:hover,
@@ -211,9 +211,9 @@
 /* rotation button sort popularity/date/title  */
 .rotated {
     transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
+    /* -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
+    -o-transform: rotate(180deg); */
 }
 
 
@@ -299,8 +299,8 @@
 .photograph-catalog-icon .like_img {
     font-size: 1.2em;
     color: transparent;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #911C1C;
+    /* -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #911C1C; */
     color: #911C1C;
 
     transition: color 400ms;
