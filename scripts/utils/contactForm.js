@@ -316,7 +316,6 @@ function fillForm() {
 
       //the page will be not refresh when submit button will be clicked
       formPhotograph.reset();
-      document.querySelector(".close_form").focus(); //disable focus button submit form
     }
   });
 }
