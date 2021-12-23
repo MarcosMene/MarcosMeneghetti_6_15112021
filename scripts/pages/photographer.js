@@ -78,9 +78,6 @@ function displayMediaData(mediasphotographer, filterBy) {
   modalLightBox.innerHTML = "";
   const LightBoxDOM = LightboxDOM();
   modalLightBox.appendChild(LightBoxDOM);
-
-  // controllers lightbox
-  lightboxShow();
 }
 
 function displayTotalLikes(photographerLike) {
@@ -125,7 +122,8 @@ function initPhotographer() {
       // display sort images for photographer
       // get info sort by button
       displayMediaData(ShowMediaphototgrapher, "popularity");
-
+      // controllers lightbox
+      lightboxShow();
       // variable accumule likes photographer
       let totallikes = null;
 
@@ -136,7 +134,7 @@ function initPhotographer() {
 
       //display total likes footer
       displayTotalLikes(Showphotographer);
-      const totalLikesText = document.querySelector(".total_likes_txt");
+      const totalLikesText = document.querySelector(".likes-footer h3");
       totalLikesText.innerHTML = totallikes;
       AddClickHeart();
 
@@ -150,12 +148,18 @@ function initPhotographer() {
       sortByType.addEventListener("change", (e) => {
         if (e.target.value === "popularity") {
           displayMediaData(ShowMediaphototgrapher, "popularity");
+          // controllers lightbox
+          lightboxShow();
         }
         if (e.target.value === "date") {
           displayMediaData(ShowMediaphototgrapher, "date");
+          // controllers lightbox
+          lightboxShow();
         }
         if (e.target.value === "title") {
           displayMediaData(ShowMediaphototgrapher, "title");
+          // controllers lightbox
+          lightboxShow();
         }
         AddClickHeart();
       });
