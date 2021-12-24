@@ -242,9 +242,8 @@ function fillForm() {
       firstNameError.style.display = "inline";
       firstName.style.border = "4px solid red";
       submitBtn.setAttribute("disabled", true);
-    } else if (firstName.value.match(/[ !@#$%^&*()_+\=\[\]{};':"\\|,.<>\/?]/)) {
-      firstNameError.innerHTML =
-        "Le prénom ne doit pas avoir des espaces et symboles";
+    } else if (firstName.value.match(/[!@#$%^&*()_+\=\[\]{};':"\\|,.<>\/?]/)) {
+      firstNameError.innerHTML = "Le prénom ne doit pas avoir des symboles";
       firstNameError.style.display = "inline";
       firstName.style.border = "4px solid red";
       submitBtn.setAttribute("disabled", true);
