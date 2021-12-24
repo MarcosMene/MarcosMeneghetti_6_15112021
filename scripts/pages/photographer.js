@@ -76,7 +76,7 @@ function displayMediaData(mediasphotographer, filterBy) {
 
   // create LightBoxDOM
   modalLightBox.innerHTML = "";
-  const LightBoxDOM = LightboxDOM();
+  const LightBoxDOM = LightDOM();
   modalLightBox.appendChild(LightBoxDOM);
 }
 
@@ -123,7 +123,7 @@ function initPhotographer() {
       // get info sort by button
       displayMediaData(ShowMediaphototgrapher, "popularity");
       // controllers lightbox
-      lightboxShow();
+
       // variable accumule likes photographer
       let totallikes = null;
 
@@ -137,7 +137,7 @@ function initPhotographer() {
       const totalLikesText = document.querySelector(".likes-footer h3");
       totalLikesText.innerHTML = totallikes;
       AddClickHeart();
-
+      lightboxShow();
       const sortByType = document.getElementById("select_images");
 
       sortByType.addEventListener("click", () => {
@@ -149,19 +149,19 @@ function initPhotographer() {
         if (e.target.value === "popularity") {
           displayMediaData(ShowMediaphototgrapher, "popularity");
           // controllers lightbox
-          lightboxShow();
+          // lightboxShow();
         }
         if (e.target.value === "date") {
           displayMediaData(ShowMediaphototgrapher, "date");
           // controllers lightbox
-          lightboxShow();
+          // lightboxShow();
         }
         if (e.target.value === "title") {
           displayMediaData(ShowMediaphototgrapher, "title");
           // controllers lightbox
-          lightboxShow();
         }
         AddClickHeart();
+        lightboxShow();
       });
 
       // display formulaire

@@ -1,4 +1,4 @@
-function LightboxDOM() {
+function LightDOM() {
   // create lightbox
   const modalLightBox = document.createElement("article");
   modalLightBox.classList.add("modal_carousel");

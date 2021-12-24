@@ -13,7 +13,7 @@ function MediaPageFactory(data) {
     cardmedias += `<a href="#" class="media_link" data-mediaid="${id}" role="button" aria-label="${alt}" tabindex="0">
 `;
     if (video !== undefined) {
-      cardmedias += `<video class="card_video medias_all" aria-label="${alt}" controls >
+      cardmedias += `<video class="card_video medias_all" aria-label="${alt}" controls>
       <source src="./assets/photographers/${photographerId}/${video}" type="video/mp4">
       </video>`;
     } else {
