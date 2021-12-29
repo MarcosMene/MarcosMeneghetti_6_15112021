@@ -72,6 +72,7 @@ function fillForm() {
     contactModal.style.display = "none";
     bodyDiv.classList.remove("no-scroll");
 
+    //call function to enable old tabindex value for other divs outside form
     enableTabindexForm();
 
     const ContactButton = document.querySelector(".contact_me");

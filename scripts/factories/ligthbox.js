@@ -22,7 +22,7 @@ function LightDOM() {
   }
 
   // add buttons lightbox
-  let buttonsLightBox = `<a href="#" class="controls controls-left">
+  let buttonsLightBox = `<a href="#" class="controls controls_left">
 <div role="button" class="control_btn" >
   <span class="img prev_image" >
     <i aria-hidden="true" class="fas fa-chevron-left"></i>

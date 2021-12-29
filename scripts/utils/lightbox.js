@@ -62,7 +62,7 @@ function lightboxShow() {
       }
 
       //disable tabindex video catalog
-      const videoCatalog = document.querySelectorAll(".card_video");
+      const videoCatalog = document.querySelectorAll(".media_link .card_video");
       for (let i = 0; i < videoCatalog.length; i++) {
         videoCatalog[i].setAttribute("tabIndex", "-1");
       }
@@ -86,7 +86,7 @@ function lightboxShow() {
     }
   });
 
-  //controls lightbox prev/next
+  //controls lightbox prev/next <> click
   const linkPrevLightBox = document.querySelector(".prev_image");
   linkPrevLightBox.addEventListener("click", (event) => {
     event.preventDefault();
@@ -97,6 +97,22 @@ function lightboxShow() {
     event.preventDefault();
     plusSlides(1);
   });
+  //controls lightbox prev/next <> enter
+  const linkPrevEnterLightBox = document.querySelector(".controls_left");
+  linkPrevEnterLightBox.addEventListener("keydown", (e) => {
+    if (e.code === "Enter") {
+      e.preventDefault();
+      plusSlides(-1);
+    }
+  });
+  const linkNextEnterLightBox = document.querySelector(".controls_right");
+  linkNextEnterLightBox.addEventListener("keydown", (e) => {
+    if (e.code === "Enter") {
+      e.preventDefault();
+      plusSlides(1);
+    }
+  });
+
   let getIndexMediaModal; //get value of media modal
 
   // animation of lightbox
@@ -168,7 +184,7 @@ function lightboxShow() {
     }
 
     //enable tabindex video catalog
-    const videoCatalog = document.querySelectorAll(".card_video");
+    const videoCatalog = document.querySelectorAll(".media_link .card_video");
     for (let i = 0; i < videoCatalog.length; i++) {
       videoCatalog[i].removeAttribute("tabIndex", "-1");
     }

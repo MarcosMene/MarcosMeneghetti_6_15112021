@@ -65,7 +65,7 @@ function displayMediaData(mediasphotographer, filterBy) {
     });
   }
 
-  // empty mediaSection
+  // create mediaSection
   MediaSection.innerHTML = "";
   mediasphotographerFiltered.forEach((media) => {
     const MediaModel = MediaPageFactory(media);
@@ -110,8 +110,10 @@ function initPhotographer() {
         (photographer) => photographer.id == idURL
       );
 
+      // show header photographer
       displayPhotographerData(Showphotographer);
 
+      //show button sort by
       displaySortImages();
 
       //filtre media avec id
@@ -140,6 +142,7 @@ function initPhotographer() {
       lightboxShow();
       const sortByType = document.getElementById("select_images");
 
+      //change orientation arrow buttom sort by popularity/date/title
       sortByType.addEventListener("click", () => {
         const arrowUpDown = document.querySelector(".arrow-down");
         arrowUpDown.classList.toggle("rotated");
@@ -148,17 +151,12 @@ function initPhotographer() {
       sortByType.addEventListener("change", (e) => {
         if (e.target.value === "popularity") {
           displayMediaData(ShowMediaphototgrapher, "popularity");
-          // controllers lightbox
-          // lightboxShow();
         }
         if (e.target.value === "date") {
           displayMediaData(ShowMediaphototgrapher, "date");
-          // controllers lightbox
-          // lightboxShow();
         }
         if (e.target.value === "title") {
           displayMediaData(ShowMediaphototgrapher, "title");
-          // controllers lightbox
         }
         AddClickHeart();
         lightboxShow();

@@ -12,9 +12,7 @@
     overflow: hidden;
 }
 
-.invisible {
-    visibility: hidden;
-}
+
 
 
 .photograph-header {
@@ -346,7 +344,7 @@
     width: 100%;
 }
 
-.lightbox_modal .controls-left {
+.lightbox_modal .controls_left {
     left: 10px;
     border: 1px solid transparent;
 }
@@ -357,9 +355,9 @@
 }
 
 .lightbox_modal .controls_right:hover,
-.lightbox_modal .controls-left:hover,
+.lightbox_modal .controls_left:hover,
 .lightbox_modal .controls_right:focus,
-.lightbox_modal .controls-left:focus {
+.lightbox_modal .controls_left:focus {
     outline: none;
     border: 1px solid #901C1C;
 }
